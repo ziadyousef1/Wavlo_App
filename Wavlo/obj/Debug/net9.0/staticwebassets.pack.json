@@ -1,0 +1,37 @@
+{
+  "Files": [
+    {
+      "Id": "D:\\College\\LEVEL 3 (2)\\SW2\\Project\\Wavlo\\Wavlo\\wwwroot\\chat.html",
+      "PackagePath": "staticwebassets\\chat.html"
+    },
+    {
+      "Id": "D:\\College\\LEVEL 3 (2)\\SW2\\Project\\Wavlo\\Wavlo\\wwwroot\\login.html",
+      "PackagePath": "staticwebassets\\login.html"
+    },
+    {
+      "Id": "D:\\College\\LEVEL 3 (2)\\SW2\\Project\\Wavlo\\Wavlo\\wwwroot\\styles.css",
+      "PackagePath": "staticwebassets\\styles.css"
+    },
+    {
+      "Id": "obj\\Debug\\net9.0\\staticwebassets\\msbuild.Wavlo.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssetEndpoints.props"
+    },
+    {
+      "Id": "obj\\Debug\\net9.0\\staticwebassets\\msbuild.Wavlo.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net9.0\\staticwebassets\\msbuild.build.Wavlo.props",
+      "PackagePath": "build\\Wavlo.props"
+    },
+    {
+      "Id": "obj\\Debug\\net9.0\\staticwebassets\\msbuild.buildMultiTargeting.Wavlo.props",
+      "PackagePath": "buildMultiTargeting\\Wavlo.props"
+    },
+    {
+      "Id": "obj\\Debug\\net9.0\\staticwebassets\\msbuild.buildTransitive.Wavlo.props",
+      "PackagePath": "buildTransitive\\Wavlo.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

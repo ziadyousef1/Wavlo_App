@@ -1,0 +1,1042 @@
+{
+  "Version": 1,
+  "Hash": "Ot0Xs03roqQLcICZwinqahvsw7bHe0HXDr/vWI9jTFw=",
+  "Source": "Wavlo",
+  "BasePath": "_content/Wavlo",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "Wavlo\\wwwroot",
+      "Source": "Wavlo",
+      "ContentRoot": "D:\\College\\LEVEL 3 (2)\\SW2\\Project\\Wavlo\\Wavlo\\wwwroot\\",
+      "BasePath": "_content/Wavlo",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "D:\\College\\LEVEL 3 (2)\\SW2\\Project\\Wavlo\\Wavlo\\obj\\Debug\\net9.0\\compressed\\4fw957dtji-h97ncytm5b.gz",
+      "SourceId": "Wavlo",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\College\\LEVEL 3 (2)\\SW2\\Project\\Wavlo\\Wavlo\\obj\\Debug\\net9.0\\compressed\\",
+      "BasePath": "_content/Wavlo",
+      "RelativePath": "login#[.{fingerprint=h97ncytm5b}]?.html.gz",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "D:\\College\\LEVEL 3 (2)\\SW2\\Project\\Wavlo\\Wavlo\\wwwroot\\login.html",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "Fingerprint": "9a0q6m55vz",
+      "Integrity": "Dw4MF/CmKiua9TPK2+2r9ghRGrB3gGz6W8Uz8a8wGv4=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "D:\\College\\LEVEL 3 (2)\\SW2\\Project\\Wavlo\\Wavlo\\wwwroot\\login.html"
+    },
+    {
+      "Identity": "D:\\College\\LEVEL 3 (2)\\SW2\\Project\\Wavlo\\Wavlo\\obj\\Debug\\net9.0\\compressed\\9mityhv4kf-rrg0ki2duv.gz",
+      "SourceId": "Wavlo",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\College\\LEVEL 3 (2)\\SW2\\Project\\Wavlo\\Wavlo\\obj\\Debug\\net9.0\\compressed\\",
+      "BasePath": "_content/Wavlo",
+      "RelativePath": "chat#[.{fingerprint=rrg0ki2duv}]?.html.gz",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "D:\\College\\LEVEL 3 (2)\\SW2\\Project\\Wavlo\\Wavlo\\wwwroot\\chat.html",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "Fingerprint": "gygnwbe60t",
+      "Integrity": "mEHWUInYIBsskFEqfXFGnvUjgR7dBE6fbSmgI0h0woo=",
+      "CopyToOutputDirectory": "Always",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "D:\\College\\LEVEL 3 (2)\\SW2\\Project\\Wavlo\\Wavlo\\wwwroot\\chat.html"
+    },
+    {
+      "Identity": "D:\\College\\LEVEL 3 (2)\\SW2\\Project\\Wavlo\\Wavlo\\obj\\Debug\\net9.0\\compressed\\magg6kwlra-bjgmt2lism.gz",
+      "SourceId": "Wavlo",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\College\\LEVEL 3 (2)\\SW2\\Project\\Wavlo\\Wavlo\\obj\\Debug\\net9.0\\compressed\\",
+      "BasePath": "_content/Wavlo",
+      "RelativePath": "styles#[.{fingerprint=bjgmt2lism}]?.css.gz",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "D:\\College\\LEVEL 3 (2)\\SW2\\Project\\Wavlo\\Wavlo\\wwwroot\\styles.css",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "Fingerprint": "y164fdn8kr",
+      "Integrity": "piqKUX2A4z58kF4lK9hme29lr4Bti+yVCHnowmKXf8Q=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "D:\\College\\LEVEL 3 (2)\\SW2\\Project\\Wavlo\\Wavlo\\wwwroot\\styles.css"
+    },
+    {
+      "Identity": "D:\\College\\LEVEL 3 (2)\\SW2\\Project\\Wavlo\\Wavlo\\wwwroot\\chat.html",
+      "SourceId": "Wavlo",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\College\\LEVEL 3 (2)\\SW2\\Project\\Wavlo\\Wavlo\\wwwroot\\",
+      "BasePath": "_content/Wavlo",
+      "RelativePath": "chat#[.{fingerprint}]?.html",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "rrg0ki2duv",
+      "Integrity": "GS8uesfrygvjM8pvJFylATsIEnmJ4bGpTcx19FYs7xo=",
+      "CopyToOutputDirectory": "Always",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\chat.html"
+    },
+    {
+      "Identity": "D:\\College\\LEVEL 3 (2)\\SW2\\Project\\Wavlo\\Wavlo\\wwwroot\\login.html",
+      "SourceId": "Wavlo",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\College\\LEVEL 3 (2)\\SW2\\Project\\Wavlo\\Wavlo\\wwwroot\\",
+      "BasePath": "_content/Wavlo",
+      "RelativePath": "login#[.{fingerprint}]?.html",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "h97ncytm5b",
+      "Integrity": "hSgtbRvn8X0IktJ3E3VgZsdgli0HeZrV6F7AZQUIXto=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\login.html"
+    },
+    {
+      "Identity": "D:\\College\\LEVEL 3 (2)\\SW2\\Project\\Wavlo\\Wavlo\\wwwroot\\styles.css",
+      "SourceId": "Wavlo",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\College\\LEVEL 3 (2)\\SW2\\Project\\Wavlo\\Wavlo\\wwwroot\\",
+      "BasePath": "_content/Wavlo",
+      "RelativePath": "styles#[.{fingerprint}]?.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "bjgmt2lism",
+      "Integrity": "N1LdWAPKneIY+CjNXjHMCho9DGmlQhrForfcpirQe/U=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\styles.css"
+    }
+  ],
+  "Endpoints": [
+    {
+      "Route": "chat.html",
+      "AssetFile": "D:\\College\\LEVEL 3 (2)\\SW2\\Project\\Wavlo\\Wavlo\\obj\\Debug\\net9.0\\compressed\\9mityhv4kf-rrg0ki2duv.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.000542299349"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1843"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"mEHWUInYIBsskFEqfXFGnvUjgR7dBE6fbSmgI0h0woo=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 02 Mar 2025 20:07:50 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/html"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"GS8uesfrygvjM8pvJFylATsIEnmJ4bGpTcx19FYs7xo=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-GS8uesfrygvjM8pvJFylATsIEnmJ4bGpTcx19FYs7xo="
+        }
+      ]
+    },
+    {
+      "Route": "chat.html",
+      "AssetFile": "D:\\College\\LEVEL 3 (2)\\SW2\\Project\\Wavlo\\Wavlo\\wwwroot\\chat.html",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "6391"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/html"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"GS8uesfrygvjM8pvJFylATsIEnmJ4bGpTcx19FYs7xo=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 02 Mar 2025 20:07:50 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-GS8uesfrygvjM8pvJFylATsIEnmJ4bGpTcx19FYs7xo="
+        }
+      ]
+    },
+    {
+      "Route": "chat.html.gz",
+      "AssetFile": "D:\\College\\LEVEL 3 (2)\\SW2\\Project\\Wavlo\\Wavlo\\obj\\Debug\\net9.0\\compressed\\9mityhv4kf-rrg0ki2duv.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1843"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/html"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"mEHWUInYIBsskFEqfXFGnvUjgR7dBE6fbSmgI0h0woo=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 02 Mar 2025 20:07:50 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-mEHWUInYIBsskFEqfXFGnvUjgR7dBE6fbSmgI0h0woo="
+        }
+      ]
+    },
+    {
+      "Route": "chat.rrg0ki2duv.html",
+      "AssetFile": "D:\\College\\LEVEL 3 (2)\\SW2\\Project\\Wavlo\\Wavlo\\obj\\Debug\\net9.0\\compressed\\9mityhv4kf-rrg0ki2duv.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.000542299349"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1843"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"mEHWUInYIBsskFEqfXFGnvUjgR7dBE6fbSmgI0h0woo=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 02 Mar 2025 20:07:50 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/html"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"GS8uesfrygvjM8pvJFylATsIEnmJ4bGpTcx19FYs7xo=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "rrg0ki2duv"
+        },
+        {
+          "Name": "label",
+          "Value": "chat.html"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-GS8uesfrygvjM8pvJFylATsIEnmJ4bGpTcx19FYs7xo="
+        }
+      ]
+    },
+    {
+      "Route": "chat.rrg0ki2duv.html",
+      "AssetFile": "D:\\College\\LEVEL 3 (2)\\SW2\\Project\\Wavlo\\Wavlo\\wwwroot\\chat.html",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "6391"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/html"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"GS8uesfrygvjM8pvJFylATsIEnmJ4bGpTcx19FYs7xo=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 02 Mar 2025 20:07:50 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "rrg0ki2duv"
+        },
+        {
+          "Name": "label",
+          "Value": "chat.html"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-GS8uesfrygvjM8pvJFylATsIEnmJ4bGpTcx19FYs7xo="
+        }
+      ]
+    },
+    {
+      "Route": "chat.rrg0ki2duv.html.gz",
+      "AssetFile": "D:\\College\\LEVEL 3 (2)\\SW2\\Project\\Wavlo\\Wavlo\\obj\\Debug\\net9.0\\compressed\\9mityhv4kf-rrg0ki2duv.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1843"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/html"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"mEHWUInYIBsskFEqfXFGnvUjgR7dBE6fbSmgI0h0woo=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 02 Mar 2025 20:07:50 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "rrg0ki2duv"
+        },
+        {
+          "Name": "label",
+          "Value": "chat.html.gz"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-mEHWUInYIBsskFEqfXFGnvUjgR7dBE6fbSmgI0h0woo="
+        }
+      ]
+    },
+    {
+      "Route": "login.h97ncytm5b.html",
+      "AssetFile": "D:\\College\\LEVEL 3 (2)\\SW2\\Project\\Wavlo\\Wavlo\\obj\\Debug\\net9.0\\compressed\\4fw957dtji-h97ncytm5b.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.000959692898"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1041"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"Dw4MF/CmKiua9TPK2+2r9ghRGrB3gGz6W8Uz8a8wGv4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 02 Mar 2025 19:57:50 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/html"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"hSgtbRvn8X0IktJ3E3VgZsdgli0HeZrV6F7AZQUIXto=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "h97ncytm5b"
+        },
+        {
+          "Name": "label",
+          "Value": "login.html"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-hSgtbRvn8X0IktJ3E3VgZsdgli0HeZrV6F7AZQUIXto="
+        }
+      ]
+    },
+    {
+      "Route": "login.h97ncytm5b.html",
+      "AssetFile": "D:\\College\\LEVEL 3 (2)\\SW2\\Project\\Wavlo\\Wavlo\\wwwroot\\login.html",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2857"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/html"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"hSgtbRvn8X0IktJ3E3VgZsdgli0HeZrV6F7AZQUIXto=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 02 Mar 2025 19:57:50 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "h97ncytm5b"
+        },
+        {
+          "Name": "label",
+          "Value": "login.html"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-hSgtbRvn8X0IktJ3E3VgZsdgli0HeZrV6F7AZQUIXto="
+        }
+      ]
+    },
+    {
+      "Route": "login.h97ncytm5b.html.gz",
+      "AssetFile": "D:\\College\\LEVEL 3 (2)\\SW2\\Project\\Wavlo\\Wavlo\\obj\\Debug\\net9.0\\compressed\\4fw957dtji-h97ncytm5b.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1041"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/html"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"Dw4MF/CmKiua9TPK2+2r9ghRGrB3gGz6W8Uz8a8wGv4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 02 Mar 2025 19:57:50 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "h97ncytm5b"
+        },
+        {
+          "Name": "label",
+          "Value": "login.html.gz"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-Dw4MF/CmKiua9TPK2+2r9ghRGrB3gGz6W8Uz8a8wGv4="
+        }
+      ]
+    },
+    {
+      "Route": "login.html",
+      "AssetFile": "D:\\College\\LEVEL 3 (2)\\SW2\\Project\\Wavlo\\Wavlo\\obj\\Debug\\net9.0\\compressed\\4fw957dtji-h97ncytm5b.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.000959692898"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1041"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"Dw4MF/CmKiua9TPK2+2r9ghRGrB3gGz6W8Uz8a8wGv4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 02 Mar 2025 19:57:50 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/html"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"hSgtbRvn8X0IktJ3E3VgZsdgli0HeZrV6F7AZQUIXto=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-hSgtbRvn8X0IktJ3E3VgZsdgli0HeZrV6F7AZQUIXto="
+        }
+      ]
+    },
+    {
+      "Route": "login.html",
+      "AssetFile": "D:\\College\\LEVEL 3 (2)\\SW2\\Project\\Wavlo\\Wavlo\\wwwroot\\login.html",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2857"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/html"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"hSgtbRvn8X0IktJ3E3VgZsdgli0HeZrV6F7AZQUIXto=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 02 Mar 2025 19:57:50 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-hSgtbRvn8X0IktJ3E3VgZsdgli0HeZrV6F7AZQUIXto="
+        }
+      ]
+    },
+    {
+      "Route": "login.html.gz",
+      "AssetFile": "D:\\College\\LEVEL 3 (2)\\SW2\\Project\\Wavlo\\Wavlo\\obj\\Debug\\net9.0\\compressed\\4fw957dtji-h97ncytm5b.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1041"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/html"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"Dw4MF/CmKiua9TPK2+2r9ghRGrB3gGz6W8Uz8a8wGv4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 02 Mar 2025 19:57:50 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-Dw4MF/CmKiua9TPK2+2r9ghRGrB3gGz6W8Uz8a8wGv4="
+        }
+      ]
+    },
+    {
+      "Route": "styles.bjgmt2lism.css",
+      "AssetFile": "D:\\College\\LEVEL 3 (2)\\SW2\\Project\\Wavlo\\Wavlo\\obj\\Debug\\net9.0\\compressed\\magg6kwlra-bjgmt2lism.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.002481389578"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "402"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"piqKUX2A4z58kF4lK9hme29lr4Bti+yVCHnowmKXf8Q=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 02 Mar 2025 04:27:18 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"N1LdWAPKneIY+CjNXjHMCho9DGmlQhrForfcpirQe/U=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "bjgmt2lism"
+        },
+        {
+          "Name": "label",
+          "Value": "styles.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-N1LdWAPKneIY+CjNXjHMCho9DGmlQhrForfcpirQe/U="
+        }
+      ]
+    },
+    {
+      "Route": "styles.bjgmt2lism.css",
+      "AssetFile": "D:\\College\\LEVEL 3 (2)\\SW2\\Project\\Wavlo\\Wavlo\\wwwroot\\styles.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "949"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"N1LdWAPKneIY+CjNXjHMCho9DGmlQhrForfcpirQe/U=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 02 Mar 2025 04:27:18 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "bjgmt2lism"
+        },
+        {
+          "Name": "label",
+          "Value": "styles.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-N1LdWAPKneIY+CjNXjHMCho9DGmlQhrForfcpirQe/U="
+        }
+      ]
+    },
+    {
+      "Route": "styles.bjgmt2lism.css.gz",
+      "AssetFile": "D:\\College\\LEVEL 3 (2)\\SW2\\Project\\Wavlo\\Wavlo\\obj\\Debug\\net9.0\\compressed\\magg6kwlra-bjgmt2lism.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "402"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"piqKUX2A4z58kF4lK9hme29lr4Bti+yVCHnowmKXf8Q=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 02 Mar 2025 04:27:18 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "bjgmt2lism"
+        },
+        {
+          "Name": "label",
+          "Value": "styles.css.gz"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-piqKUX2A4z58kF4lK9hme29lr4Bti+yVCHnowmKXf8Q="
+        }
+      ]
+    },
+    {
+      "Route": "styles.css",
+      "AssetFile": "D:\\College\\LEVEL 3 (2)\\SW2\\Project\\Wavlo\\Wavlo\\obj\\Debug\\net9.0\\compressed\\magg6kwlra-bjgmt2lism.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.002481389578"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "402"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"piqKUX2A4z58kF4lK9hme29lr4Bti+yVCHnowmKXf8Q=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 02 Mar 2025 04:27:18 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"N1LdWAPKneIY+CjNXjHMCho9DGmlQhrForfcpirQe/U=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-N1LdWAPKneIY+CjNXjHMCho9DGmlQhrForfcpirQe/U="
+        }
+      ]
+    },
+    {
+      "Route": "styles.css",
+      "AssetFile": "D:\\College\\LEVEL 3 (2)\\SW2\\Project\\Wavlo\\Wavlo\\wwwroot\\styles.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "949"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"N1LdWAPKneIY+CjNXjHMCho9DGmlQhrForfcpirQe/U=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 02 Mar 2025 04:27:18 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-N1LdWAPKneIY+CjNXjHMCho9DGmlQhrForfcpirQe/U="
+        }
+      ]
+    },
+    {
+      "Route": "styles.css.gz",
+      "AssetFile": "D:\\College\\LEVEL 3 (2)\\SW2\\Project\\Wavlo\\Wavlo\\obj\\Debug\\net9.0\\compressed\\magg6kwlra-bjgmt2lism.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "402"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"piqKUX2A4z58kF4lK9hme29lr4Bti+yVCHnowmKXf8Q=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 02 Mar 2025 04:27:18 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-piqKUX2A4z58kF4lK9hme29lr4Bti+yVCHnowmKXf8Q="
+        }
+      ]
+    }
+  ]
+}
