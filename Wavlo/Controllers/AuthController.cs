@@ -71,10 +71,10 @@ namespace Wavlo.Controllers
             {
                 Subject = new ClaimsIdentity(new[]
                 {
-            new Claim(ClaimTypes.NameIdentifier, userId.ToString()),
-            new Claim(ClaimTypes.Name, username),
-            new Claim("unique_name", username) 
-        }),
+                   new Claim(ClaimTypes.NameIdentifier, userId.ToString()),
+                   new Claim(ClaimTypes.Name, username),
+                   new Claim("unique_name", username) 
+                }),
                 Expires = DateTime.UtcNow.AddDays(1),
                 Issuer = _configuration["JWT:Issuer"],
                 Audience = _configuration["JWT:Audience"],

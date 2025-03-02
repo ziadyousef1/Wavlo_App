@@ -9,10 +9,6 @@
       "PackagePath": "staticwebassets\\login.html"
     },
     {
-      "Id": "D:\\College\\LEVEL 3 (2)\\SW2\\Project\\Wavlo\\Wavlo\\wwwroot\\styles.css",
-      "PackagePath": "staticwebassets\\styles.css"
-    },
-    {
       "Id": "obj\\Debug\\net9.0\\staticwebassets\\msbuild.Wavlo.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",
       "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssetEndpoints.props"
     },
