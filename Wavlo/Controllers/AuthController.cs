@@ -73,7 +73,7 @@ namespace Wavlo.Controllers
                 {
                    new Claim(ClaimTypes.NameIdentifier, userId.ToString()),
                    new Claim(ClaimTypes.Name, username),
-                   new Claim("unique_name", username) 
+                   //new Claim("unique_name", username) 
                 }),
                 Expires = DateTime.UtcNow.AddDays(1),
                 Issuer = _configuration["JWT:Issuer"],
