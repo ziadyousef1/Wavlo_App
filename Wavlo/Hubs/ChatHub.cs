@@ -30,7 +30,7 @@ namespace Wavlo
             {
                 Name = name,
                 Message = mess,
-                Timestamp = DateTime.Now,
+               // Timestamp = DateTime.Now,
             };
             _context.Chats.Add(chat);
             _context.SaveChanges();
