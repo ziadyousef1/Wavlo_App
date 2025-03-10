@@ -6,7 +6,7 @@
         public string Name { get; set; }
         public string Content { get; set; }
         public DateTime SentAt { get; set; }
-
+        public string? AttachmentUrl { get; set; }
         public int ChatId { get; set; }
         public Chat Chat { get; set; }
     }

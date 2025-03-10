@@ -8,6 +8,8 @@ using System.Text;
 using Wavlo.Data;
 using Microsoft.AspNet.SignalR.Hubs;
 using Wavlo;
+using Wavlo.MailService;
+using Wavlo.Services;
 
 namespace Wavlo
 {
@@ -27,19 +29,29 @@ namespace Wavlo
             options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"))
             );
 
+            var emailconfig = builder.Configuration.GetSection("EmailConfigration").Get<EmailConfigration>();
+            builder.Services.AddSingleton(emailconfig);
+
+            builder.Services.AddScoped<IAuthService, AuthService>();
+            builder.Services.AddTransient<ITokenService, TokenService>();
+            builder.Services.AddTransient<IEmailSender, EmailSender>();
+
             builder.Services.AddSignalR();
+            var jwtOptions = builder.Configuration.GetSection("JWT").Get<JwtSettings>();
+            builder.Services.AddSingleton(jwtOptions);
             builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
                 .AddJwtBearer(options =>
                 {
+                    options.SaveToken = true;
                     options.TokenValidationParameters = new TokenValidationParameters
                     {
                         ValidateIssuerSigningKey = true,
                         ValidateIssuer = true,
                         ValidateAudience = true,
                         ValidateLifetime = true,
-                        ValidIssuer = builder.Configuration["JWT:Issuer"],
-                        ValidAudience = builder.Configuration["JWT:Audience"],
-                        IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(builder.Configuration["JWT:Key"]))
+                        ValidIssuer = jwtOptions.Issuer,
+                        ValidAudience = jwtOptions.Audience,
+                        IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(jwtOptions.Key))
                     };
 
                    

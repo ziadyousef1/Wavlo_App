@@ -170,3 +170,6 @@ D:\College\LEVEL 3 (2)\SW2\Project\Wavlo\Wavlo\bin\Debug\net9.0\wwwroot\chat.htm
 D:\College\LEVEL 3 (2)\SW2\Project\Wavlo\Wavlo\obj\Debug\net9.0\compressed\4fw957dtji-h97ncytm5b.gz
 D:\College\LEVEL 3 (2)\SW2\Project\Wavlo\Wavlo\obj\Debug\net9.0\compressed\9mityhv4kf-rrg0ki2duv.gz
 D:\College\LEVEL 3 (2)\SW2\Project\Wavlo\Wavlo\obj\Debug\net9.0\Wavlo.sourcelink.json
+D:\College\LEVEL 3 (2)\SW2\Project\Wavlo\Wavlo\bin\Debug\net9.0\BouncyCastle.Cryptography.dll
+D:\College\LEVEL 3 (2)\SW2\Project\Wavlo\Wavlo\bin\Debug\net9.0\MailKit.dll
+D:\College\LEVEL 3 (2)\SW2\Project\Wavlo\Wavlo\bin\Debug\net9.0\MimeKit.dll

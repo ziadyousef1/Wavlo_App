@@ -55,6 +55,10 @@
               "target": "Package",
               "version": "[4.0.3, )"
             },
+            "MailKit": {
+              "target": "Package",
+              "version": "[4.11.0, )"
+            },
             "Microsoft.AspNet.SignalR": {
               "target": "Package",
               "version": "[2.4.3, )"
@@ -84,6 +88,10 @@
               "suppressParent": "All",
               "target": "Package",
               "version": "[9.0.2, )"
+            },
+            "MimeKit": {
+              "target": "Package",
+              "version": "[4.11.0, )"
             },
             "Scalar.AspNetCore": {
               "target": "Package",
