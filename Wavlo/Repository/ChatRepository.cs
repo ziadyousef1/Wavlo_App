@@ -11,13 +11,13 @@ namespace Wavlo.Repository
         {
             _context = context;
         }
-        public async Task<Message> CreateMessageAsync(int chatId, string message, int userId, string? attachmentUrl = null)
+        public async Task<Message> CreateMessageAsync(int chatId, string message, string userId, string? attachmentUrl = null)
         {
             var newMessage = new Message
             {
                 ChatId = chatId,
                 Content = message,
-                Id = userId,
+                Name = userId,
                 SentAt = DateTime.Now,
                 AttachmentUrl = attachmentUrl
             };
@@ -29,7 +29,7 @@ namespace Wavlo.Repository
 
         }
 
-        public async Task<int> CreatePrivateRoomAsync(int rootId, int targetId)
+        public async Task<int> CreatePrivateRoomAsync(string rootId, string targetId)
         {
             var chat = new Chat
             {
@@ -54,7 +54,7 @@ namespace Wavlo.Repository
 
         }
 
-        public async Task<int> CreateRoomAsync(string name, int userId)
+        public async Task<int> CreateRoomAsync(string name, string userId)
         {
             var chat = new Chat
             {
@@ -108,7 +108,7 @@ namespace Wavlo.Repository
                  .FirstOrDefaultAsync(x => x.Id == id);
         }
 
-        public async Task<IEnumerable<Chat>> GetChatsAsync(int userId)
+        public async Task<IEnumerable<Chat>> GetChatsAsync(string userId)
         {
             return await _context.Chats
                 .Include(x => x.Users)
@@ -117,7 +117,7 @@ namespace Wavlo.Repository
                 .ToListAsync();
         }
 
-        public async Task<IEnumerable<Chat>> GetPrivateChatsAsync(int userId)
+        public async Task<IEnumerable<Chat>> GetPrivateChatsAsync(string userId)
         {
             return _context.Chats
                    .Include(x => x.Users)
@@ -128,7 +128,7 @@ namespace Wavlo.Repository
                    .ToList();
         }
 
-        public async Task<bool> JoinRoomAsync(int chatId, int userId)
+        public async Task<bool> JoinRoomAsync(int chatId, string userId)
         {
             bool alreadyJoined = await _context.ChatUsers
                                 .AnyAsync(cu => cu.ChatId == chatId && cu.UserId == userId);

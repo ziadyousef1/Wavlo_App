@@ -15,5 +15,7 @@ namespace Wavlo.DTOs
         [Required]
         [Compare("Password")]
         public string ConfirmPassword { get; set; }
+
+        public IFormFile ProfileImage { get; set; }
     }
 }

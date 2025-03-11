@@ -43,7 +43,7 @@ namespace Wavlo.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Chats");
+                    b.ToTable("Chats", (string)null);
                 });
 
             modelBuilder.Entity("Wavlo.Models.ChatUser", b =>
@@ -61,7 +61,7 @@ namespace Wavlo.Migrations
 
                     b.HasIndex("UserId");
 
-                    b.ToTable("ChatUsers");
+                    b.ToTable("ChatUsers", (string)null);
                 });
 
             modelBuilder.Entity("Wavlo.Models.Message", b =>
@@ -93,7 +93,7 @@ namespace Wavlo.Migrations
 
                     b.HasIndex("ChatId");
 
-                    b.ToTable("Messages");
+                    b.ToTable("Messages", (string)null);
                 });
 
             modelBuilder.Entity("Wavlo.Models.User", b =>
@@ -128,7 +128,7 @@ namespace Wavlo.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Users");
+                    b.ToTable("Users", (string)null);
                 });
 
             modelBuilder.Entity("Wavlo.Models.UserImage", b =>
@@ -153,7 +153,7 @@ namespace Wavlo.Migrations
 
                     b.HasIndex("UserId");
 
-                    b.ToTable("UserImages");
+                    b.ToTable("UserImages", (string)null);
                 });
 
             modelBuilder.Entity("Wavlo.Models.ChatUser", b =>

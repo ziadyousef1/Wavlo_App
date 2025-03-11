@@ -1,8 +1,9 @@
-﻿using Microsoft.AspNetCore.Mvc.ModelBinding.Validation;
+﻿using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Mvc.ModelBinding.Validation;
 
 namespace Wavlo.Models
 {
-    public class User
+    public class User : IdentityUser
     {
         public User() : base()
         {
@@ -10,7 +11,7 @@ namespace Wavlo.Models
             UserImages = new List<UserImage>();
         }
 
-        public int Id { get; set; }
+        public string Id { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
         public string Email { get; set; }

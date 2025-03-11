@@ -23,42 +23,32 @@ namespace Wavlo
             await base.OnConnectedAsync();
         }
 
-        public /*async Task*/ void sendMessage(string name , string mess)
+        public async Task sendMessage(int roomId, string message, string? attachmentUrl = null)
         {
-            //DbSave
-            Chat chat = new Chat()
-            {
-                Name = name,
-                Message = mess,
-               // Timestamp = DateTime.Now,
-            };
-            _context.Chats.Add(chat);
-            _context.SaveChanges();
-
-
-
-            Clients.All.SendAsync("newMessage",name , mess);
-
-
-
-            //var userIdClaim = Context.User?.FindFirst(ClaimTypes.NameIdentifier)?.Value;
-            //if (string.IsNullOrEmpty(userIdClaim) || !int.TryParse(userIdClaim, out int userId))
+            //if (!int.TryParse(Context.User?.FindFirst(ClaimTypes.NameIdentifier)?.Value, out int userId))
             //{
             //    throw new HubException("Unauthorized: Invalid User ID.");
             //}
 
-            //var chat = new Chat { UserId = userId, Message = message };
+            //var chatMessage = new Chat
+            //{
+            //    RoomId = roomId,
+            //    UserId = userId,
+            //    Content = message,
+            //    AttachmentUrl = attachmentUrl,
+            //    SentAt = DateTime.UtcNow
+            //};
 
-            //try
+            //_context.Chats.Add(chatMessage);
+            //await _context.SaveChangesAsync();
+
+            //await Clients.Group(roomId.ToString()).SendAsync("ReceiveMessage", new
             //{
-            //    _context.Chats.Add(chat);
-            //    await _context.SaveChangesAsync();
-            //    await Clients.All.SendAsync("ReceiveMessage", userId.ToString(), message);
-            //}
-            //catch (Exception ex)
-            //{
-            //    throw new HubException("Error saving message: " + ex.Message);
-            //}
+            //    Text = chatMessage.Content,
+            //    AttachmentUrl = chatMessage.AttachmentUrl,
+            //    UserId = chatMessage.UserId,
+            //    SentAt = chatMessage.SentAt.ToString("dd/MM/yyyy hh:mm:ss")
+            //});
         }
         public void joinGroup(string gname , string name)
         {

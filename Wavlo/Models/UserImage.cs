@@ -8,7 +8,7 @@ namespace Wavlo.Models
         public int Id { get; set; }
         [Required]
         public string ImageUrl { get; set; }
-        public int UserId { get; set; }
+        public string UserId { get; set; }
         [ForeignKey("UserId")]
         public User User { get; set; }
         public DateTime UploadedAt { get; set; } = DateTime.UtcNow;

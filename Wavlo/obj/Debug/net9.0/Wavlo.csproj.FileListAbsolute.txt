@@ -173,3 +173,5 @@ D:\College\LEVEL 3 (2)\SW2\Project\Wavlo\Wavlo\obj\Debug\net9.0\Wavlo.sourcelink
 D:\College\LEVEL 3 (2)\SW2\Project\Wavlo\Wavlo\bin\Debug\net9.0\BouncyCastle.Cryptography.dll
 D:\College\LEVEL 3 (2)\SW2\Project\Wavlo\Wavlo\bin\Debug\net9.0\MailKit.dll
 D:\College\LEVEL 3 (2)\SW2\Project\Wavlo\Wavlo\bin\Debug\net9.0\MimeKit.dll
+D:\College\LEVEL 3 (2)\SW2\Project\Wavlo\Wavlo\obj\Debug\net9.0\compressed\5bxykunjp1-m6t8iqaf5f.gz
+D:\College\LEVEL 3 (2)\SW2\Project\Wavlo\Wavlo\bin\Debug\net9.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll

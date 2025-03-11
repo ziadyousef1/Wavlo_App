@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "LRlHVAxYFbxCU7Ihi6p8UxUwC13yCp99wgu5VM7Ge+8=",
+  "Hash": "rp1FY0yehyZxhVQU5cps8O7+RVGDS+UlP5o3CfsAMX4=",
   "Source": "Wavlo",
   "BasePath": "_content/Wavlo",
   "Mode": "Default",
@@ -36,6 +36,27 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "D:\\College\\LEVEL 3 (2)\\SW2\\Project\\Wavlo\\Wavlo\\wwwroot\\login.html"
+    },
+    {
+      "Identity": "D:\\College\\LEVEL 3 (2)\\SW2\\Project\\Wavlo\\Wavlo\\obj\\Debug\\net9.0\\compressed\\5bxykunjp1-m6t8iqaf5f.gz",
+      "SourceId": "Wavlo",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\College\\LEVEL 3 (2)\\SW2\\Project\\Wavlo\\Wavlo\\obj\\Debug\\net9.0\\compressed\\",
+      "BasePath": "_content/Wavlo",
+      "RelativePath": "register#[.{fingerprint=m6t8iqaf5f}]?.html.gz",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "D:\\College\\LEVEL 3 (2)\\SW2\\Project\\Wavlo\\Wavlo\\wwwroot\\register.html",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "Fingerprint": "v41ilbnjj5",
+      "Integrity": "P0fs0ROEV2BOGJ8SpH9BTyk7LXB1xvOq/wWAJUDk23w=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "D:\\College\\LEVEL 3 (2)\\SW2\\Project\\Wavlo\\Wavlo\\wwwroot\\register.html"
     },
     {
       "Identity": "D:\\College\\LEVEL 3 (2)\\SW2\\Project\\Wavlo\\Wavlo\\obj\\Debug\\net9.0\\compressed\\9mityhv4kf-rrg0ki2duv.gz",
@@ -99,6 +120,27 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\login.html"
+    },
+    {
+      "Identity": "D:\\College\\LEVEL 3 (2)\\SW2\\Project\\Wavlo\\Wavlo\\wwwroot\\register.html",
+      "SourceId": "Wavlo",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\College\\LEVEL 3 (2)\\SW2\\Project\\Wavlo\\Wavlo\\wwwroot\\",
+      "BasePath": "_content/Wavlo",
+      "RelativePath": "register#[.{fingerprint}]?.html",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "m6t8iqaf5f",
+      "Integrity": "vp9Vkn7hYtpTSmV5xJXv6epAE+i/2c4oCsn5ez0YNfg=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\register.html"
     }
   ],
   "Endpoints": [
@@ -695,6 +737,304 @@
         {
           "Name": "integrity",
           "Value": "sha256-Dw4MF/CmKiua9TPK2+2r9ghRGrB3gGz6W8Uz8a8wGv4="
+        }
+      ]
+    },
+    {
+      "Route": "register.html",
+      "AssetFile": "D:\\College\\LEVEL 3 (2)\\SW2\\Project\\Wavlo\\Wavlo\\obj\\Debug\\net9.0\\compressed\\5bxykunjp1-m6t8iqaf5f.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.009523809524"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "104"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"P0fs0ROEV2BOGJ8SpH9BTyk7LXB1xvOq/wWAJUDk23w=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 10 Mar 2025 22:00:46 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/html"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"vp9Vkn7hYtpTSmV5xJXv6epAE+i/2c4oCsn5ez0YNfg=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-vp9Vkn7hYtpTSmV5xJXv6epAE+i/2c4oCsn5ez0YNfg="
+        }
+      ]
+    },
+    {
+      "Route": "register.html",
+      "AssetFile": "D:\\College\\LEVEL 3 (2)\\SW2\\Project\\Wavlo\\Wavlo\\wwwroot\\register.html",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "122"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/html"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"vp9Vkn7hYtpTSmV5xJXv6epAE+i/2c4oCsn5ez0YNfg=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 10 Mar 2025 22:00:46 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-vp9Vkn7hYtpTSmV5xJXv6epAE+i/2c4oCsn5ez0YNfg="
+        }
+      ]
+    },
+    {
+      "Route": "register.html.gz",
+      "AssetFile": "D:\\College\\LEVEL 3 (2)\\SW2\\Project\\Wavlo\\Wavlo\\obj\\Debug\\net9.0\\compressed\\5bxykunjp1-m6t8iqaf5f.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "104"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/html"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"P0fs0ROEV2BOGJ8SpH9BTyk7LXB1xvOq/wWAJUDk23w=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 10 Mar 2025 22:00:46 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-P0fs0ROEV2BOGJ8SpH9BTyk7LXB1xvOq/wWAJUDk23w="
+        }
+      ]
+    },
+    {
+      "Route": "register.m6t8iqaf5f.html",
+      "AssetFile": "D:\\College\\LEVEL 3 (2)\\SW2\\Project\\Wavlo\\Wavlo\\obj\\Debug\\net9.0\\compressed\\5bxykunjp1-m6t8iqaf5f.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.009523809524"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "104"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"P0fs0ROEV2BOGJ8SpH9BTyk7LXB1xvOq/wWAJUDk23w=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 10 Mar 2025 22:00:46 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/html"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"vp9Vkn7hYtpTSmV5xJXv6epAE+i/2c4oCsn5ez0YNfg=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "m6t8iqaf5f"
+        },
+        {
+          "Name": "label",
+          "Value": "register.html"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-vp9Vkn7hYtpTSmV5xJXv6epAE+i/2c4oCsn5ez0YNfg="
+        }
+      ]
+    },
+    {
+      "Route": "register.m6t8iqaf5f.html",
+      "AssetFile": "D:\\College\\LEVEL 3 (2)\\SW2\\Project\\Wavlo\\Wavlo\\wwwroot\\register.html",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "122"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/html"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"vp9Vkn7hYtpTSmV5xJXv6epAE+i/2c4oCsn5ez0YNfg=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 10 Mar 2025 22:00:46 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "m6t8iqaf5f"
+        },
+        {
+          "Name": "label",
+          "Value": "register.html"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-vp9Vkn7hYtpTSmV5xJXv6epAE+i/2c4oCsn5ez0YNfg="
+        }
+      ]
+    },
+    {
+      "Route": "register.m6t8iqaf5f.html.gz",
+      "AssetFile": "D:\\College\\LEVEL 3 (2)\\SW2\\Project\\Wavlo\\Wavlo\\obj\\Debug\\net9.0\\compressed\\5bxykunjp1-m6t8iqaf5f.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "104"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/html"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"P0fs0ROEV2BOGJ8SpH9BTyk7LXB1xvOq/wWAJUDk23w=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 10 Mar 2025 22:00:46 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "m6t8iqaf5f"
+        },
+        {
+          "Name": "label",
+          "Value": "register.html.gz"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-P0fs0ROEV2BOGJ8SpH9BTyk7LXB1xvOq/wWAJUDk23w="
         }
       ]
     }

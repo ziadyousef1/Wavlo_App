@@ -1,4 +1,6 @@
 D:\College\LEVEL 3 (2)\SW2\Project\Wavlo\Wavlo\wwwroot\login.html
+D:\College\LEVEL 3 (2)\SW2\Project\Wavlo\Wavlo\wwwroot\register.html
 D:\College\LEVEL 3 (2)\SW2\Project\Wavlo\Wavlo\wwwroot\chat.html
 wwwroot\chat.html
 wwwroot\login.html
+wwwroot\register.html

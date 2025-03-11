@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Wavlo")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+df7c555e6362804a4f1638da7522dcbf35d06cf4")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+fd91499ba7a4cbe322df98f267f6e81475803607")]
 [assembly: System.Reflection.AssemblyProductAttribute("Wavlo")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Wavlo")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

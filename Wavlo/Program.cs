@@ -10,6 +10,9 @@ using Microsoft.AspNet.SignalR.Hubs;
 using Wavlo;
 using Wavlo.MailService;
 using Wavlo.Services;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+using Wavlo.Models;
 
 namespace Wavlo
 {
@@ -25,6 +28,14 @@ namespace Wavlo
             // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
             builder.Services.AddOpenApi();
 
+            builder.Services.AddIdentity<User, IdentityRole>()
+                            .AddEntityFrameworkStores<ChatDbContext>()
+                            .AddDefaultTokenProviders();
+
+            builder.Services.AddScoped<UserManager<User>>();
+            builder.Services.AddScoped<SignInManager<User>>();
+
+
             builder.Services.AddDbContext<ChatDbContext>(options =>
             options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"))
             );
@@ -35,6 +46,8 @@ namespace Wavlo
             builder.Services.AddScoped<IAuthService, AuthService>();
             builder.Services.AddTransient<ITokenService, TokenService>();
             builder.Services.AddTransient<IEmailSender, EmailSender>();
+            builder.Services.AddScoped<IFileService, FileService>();
+
 
             builder.Services.AddSignalR();
             var jwtOptions = builder.Configuration.GetSection("JWT").Get<JwtSettings>();
