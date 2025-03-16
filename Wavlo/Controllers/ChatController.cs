@@ -9,24 +9,30 @@ using Wavlo.DTOs;
 
 namespace Wavlo.Controllers
 {
-    [Authorize]
+    //[Authorize]
     [Route("api/[controller]")]
     [ApiController]
     public class ChatController : BaseController
     {
+        private readonly ChatDbContext _chatDb;
         private readonly IChatRepository _repository;
         private readonly IHubContext<ChatHub> _context;
 
-        public ChatController(IChatRepository repository , IHubContext<ChatHub> context)
+        public ChatController(IChatRepository repository , IHubContext<ChatHub> context , ChatDbContext chatDb)
         {
             _context = context;
             _repository = repository;
+            _chatDb = chatDb;
+        }
+        [HttpGet("users")]
+        public async Task<IActionResult> GetAllUsers()
+        {
+            var users = await _chatDb.Users.ToListAsync();
+            return Ok(users);
         }
         [HttpGet("find")]
         public async Task<IActionResult> Find([FromServices] ChatDbContext context)
         {
-           
-
             var users = await context.Users
                 .Where(x => x.Id != User.GetUserId())
                 .ToListAsync();
@@ -36,8 +42,6 @@ namespace Wavlo.Controllers
         [HttpGet("chats")]
         public async Task<IActionResult> GetChats()
         {
-            
-
             var chats = await _repository.GetChatsAsync(GetUserId());
             return Ok(chats);
         }
@@ -45,20 +49,23 @@ namespace Wavlo.Controllers
         [HttpGet("private")]
         public async Task<IActionResult> PrivateChat()
         {
-           
-
             var chats = await _repository.GetPrivateChatsAsync(GetUserId());
             return Ok(chats);
         }
         [HttpPost("create-room")]
-        public async Task<IActionResult> CreateRoom(string name, string userId)
+        public async Task<IActionResult> CreateRoom(string name)
         {
-            if (!int.TryParse(User.GetUserId(), out int rootUserId))
+            //if (!int.TryParse(User.GetUserId(), out int rootUserId))
+            //{
+            //    return BadRequest("Invalid user ID");
+            //}
+            var userId = GetUserId();  
+            if (string.IsNullOrEmpty(userId))
             {
-                return BadRequest("Invalid user ID");
+                return Unauthorized("User ID not found in token.");
             }
 
-            var chatId = await _repository.CreateRoomAsync(GetUserId(), userId);
+            var chatId = await _repository.CreateRoomAsync(name, userId);
             return Ok(new { chatId });
         }
 
@@ -71,22 +78,23 @@ namespace Wavlo.Controllers
         [HttpPost("create-private-chat")]
         public async Task<IActionResult> CreatePrivateChat(string userId)
         {
-            if (!int.TryParse(User.GetUserId(), out int rootUserId))
+            var rootUserId = User.GetUserId();
+            if (string.IsNullOrEmpty(rootUserId))
             {
                 return BadRequest("Invalid user ID");
             }
 
-            var chatId = await _repository.CreatePrivateRoomAsync(GetUserId(), userId);
+            var chatId = await _repository.CreatePrivateRoomAsync(rootUserId, userId);
             return Ok(new { chatId });
         }
 
         [HttpPost("join-room")]
         public async Task<IActionResult> JoinRoom(int id)
         {
-            if (!int.TryParse(User.GetUserId(), out int userId))
-            {
-                return BadRequest("Invalid user ID");
-            }
+            //if (!int.TryParse(User.GetUserId(), out int userId))
+            //{
+            //    return BadRequest("Invalid user ID");
+            //}
 
             var joined = await _repository.JoinRoomAsync(id, GetUserId());
             if (!joined)
@@ -103,8 +111,12 @@ namespace Wavlo.Controllers
             if (dto.RoomId <= 0 || string.IsNullOrWhiteSpace(dto.Message))
                 return BadRequest("Invalid room ID or empty message");
 
-            string? attachmentType = null;
+            var userId = GetUserId();
+            if (string.IsNullOrEmpty(userId))
+                return Unauthorized("User ID not found");
 
+           
+            string attachmentType = "Text";
             if (!string.IsNullOrEmpty(dto.AttachmentUrl))
             {
                 var extension = Path.GetExtension(dto.AttachmentUrl).ToLower();
@@ -118,20 +130,39 @@ namespace Wavlo.Controllers
                     attachmentType = "File";
             }
 
-            var messageEntity = await _repository.CreateMessageAsync(dto.RoomId, dto.Message, GetUserId() , dto.AttachmentUrl);
+            
+            var messageEntity = await _repository.CreateMessageAsync(dto.RoomId, dto.Message, userId, dto.AttachmentUrl);
 
             if (messageEntity == null)
                 return BadRequest("Failed to send message");
 
-            await _context.Clients.Group(dto.RoomId.ToString())
-                .SendAsync("ReceiveMessage", new
-                {
-                    Text = messageEntity.Content,
-                    AttachmentUrl = messageEntity.AttachmentUrl,
-                    AttachmentType = attachmentType,
-                    Name = messageEntity.Name,
-                    SentAt = messageEntity.SentAt.ToString("dd/MM/yyyy hh:mm:ss")
-                });
+            
+            if (dto.IsPrivate && !string.IsNullOrEmpty(dto.TargetUserId))
+            {
+                
+                await _context.Clients.User(dto.TargetUserId)
+                    .SendAsync("ReceiveMessage", new
+                    {
+                        Text = messageEntity.Content,
+                        AttachmentUrl = messageEntity.AttachmentUrl,
+                        AttachmentType = attachmentType,
+                        Name = messageEntity.Name,
+                        SentAt = messageEntity.SentAt.ToString("dd/MM/yyyy hh:mm:ss")
+                    });
+            }
+            else
+            {
+                
+                await _context.Clients.Group(dto.RoomId.ToString())
+                    .SendAsync("ReceiveMessage", new
+                    {
+                        Text = messageEntity.Content,
+                        AttachmentUrl = messageEntity.AttachmentUrl,
+                        AttachmentType = attachmentType,
+                        Name = messageEntity.Name,
+                        SentAt = messageEntity.SentAt.ToString("dd/MM/yyyy hh:mm:ss")
+                    });
+            }
 
             return Ok(new { messageId = messageEntity.Id, message = "Message sent successfully" });
         }

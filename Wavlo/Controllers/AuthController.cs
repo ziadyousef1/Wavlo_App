@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using Microsoft.AspNetCore.Authentication;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.Data;
 using Microsoft.AspNetCore.Mvc;
@@ -120,24 +121,57 @@ namespace Wavlo.Controllers
             return BadRequest(new { res.Message });
 
         }
+        [HttpPost("logout")]
+        public async Task<IActionResult> LogoutAndDeleteAccount()
+        {
+            
+            var userIdClaim = User.FindFirst(ClaimTypes.NameIdentifier);
+            if (userIdClaim == null)
+            {
+                return Unauthorized("User not authenticated.");
+            }
+
+            var userId = userIdClaim.Value;
+
+            
+            var user = await _user.FindByIdAsync(userId);
+            if (user == null)
+            {
+                return NotFound("User not found.");
+            }
+
+           
+            var result = await _user.DeleteAsync(user);
+            if (!result.Succeeded)
+            {
+                return StatusCode(500, "Failed to delete the account.");
+            }
+
+            
+            await HttpContext.SignOutAsync();
+
+           
+            return Ok("Account deleted successfully.");
+        }
 
 
-            //[HttpPost("authenticate")]
-            //public IActionResult Authenticate([FromBody] LoginRequestModel login)
-            //{
-            //    var user = _context.Users.SingleOrDefault(u => u.Username == login.Username);
-            //    if (user == null || !BCrypt.Net.BCrypt.Verify(login.Password, user.PasswordHash))
-            //        return Unauthorized();
 
-            //    var token = GenerateJwtToken(user.Id);
-            //    return Ok(new { token });
-            //}
+        //[HttpPost("authenticate")]
+        //public IActionResult Authenticate([FromBody] LoginRequestModel login)
+        //{
+        //    var user = _context.Users.SingleOrDefault(u => u.Username == login.Username);
+        //    if (user == null || !BCrypt.Net.BCrypt.Verify(login.Password, user.PasswordHash))
+        //        return Unauthorized();
+
+        //    var token = GenerateJwtToken(user.Id);
+        //    return Ok(new { token });
+        //}
 
 
 
-            //    //var token = GenerateJwtToken(user.Id , user.Username);
+        //    //var token = GenerateJwtToken(user.Id , user.Username);
 
-            //   // return Ok(new { token });
-            //} 
+        //   // return Ok(new { token });
+        //} 
     }
 }

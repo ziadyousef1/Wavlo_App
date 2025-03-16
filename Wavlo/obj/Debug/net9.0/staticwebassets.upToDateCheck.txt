@@ -1,6 +1,24 @@
+D:\College\LEVEL 3 (2)\SW2\Project\Wavlo\Wavlo\wwwroot\forgetpassword.html
 D:\College\LEVEL 3 (2)\SW2\Project\Wavlo\Wavlo\wwwroot\login.html
+D:\College\LEVEL 3 (2)\SW2\Project\Wavlo\Wavlo\wwwroot\validate-otp.html
 D:\College\LEVEL 3 (2)\SW2\Project\Wavlo\Wavlo\wwwroot\register.html
 D:\College\LEVEL 3 (2)\SW2\Project\Wavlo\Wavlo\wwwroot\chat.html
+D:\College\LEVEL 3 (2)\SW2\Project\Wavlo\Wavlo\wwwroot\reset-password.html
+D:\College\LEVEL 3 (2)\SW2\Project\Wavlo\Wavlo\wwwroot\logout.html
 wwwroot\chat.html
+wwwroot\forgetpassword.html
 wwwroot\login.html
+wwwroot\logout.html
 wwwroot\register.html
+wwwroot\reset-password.html
+wwwroot\uploads\015f9cd6-740b-4db5-ac72-502dadee9242_Screenshot 2024-03-13 050247.png
+wwwroot\uploads\39a59219-a830-4c5c-9d57-3927d35edb81_Screenshot 2024-03-13 050247.png
+wwwroot\uploads\485a4e85-598a-491b-817b-1e31b495d24c_Screenshot 2024-03-13 050247.png
+wwwroot\uploads\4ab6798f-3124-43b7-b685-c104ba4b9753_Screenshot 2024-03-13 050247.png
+wwwroot\uploads\87d3acd5-f688-46cb-a3c0-2efa26df7deb_Tabib.png
+wwwroot\uploads\92a66081-1895-4bec-9373-f192844ba274_photo_2025-02-16_02-33-11.jpg
+wwwroot\uploads\95c2cc9e-b720-47b8-8859-adeefef6fe3c_photo_2025-02-16_02-33-11.jpg
+wwwroot\uploads\9842ff52-0379-41d5-aef4-e0ad4ccc032f_Screenshot 2024-03-13 050247.png
+wwwroot\uploads\99894d52-5358-4493-ae2c-27c49509e80a_Screenshot 2024-03-13 050247.png
+wwwroot\uploads\f8553d68-72f0-4c85-bd7a-dee91a85cda4_Screenshot 2024-03-13 050247.png
+wwwroot\validate-otp.html

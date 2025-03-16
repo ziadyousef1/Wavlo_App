@@ -10,8 +10,8 @@ namespace Wavlo.Services
 {
     public class TokenService : ITokenService
     {
-        private readonly UserManager<User> _userManager;
-        private readonly JwtSettings _jwtSettings;
+       public readonly UserManager<User> _userManager;
+       public readonly JwtSettings _jwtSettings;
         public TokenService(IOptions<JwtSettings> jwtSettings , UserManager<User> userManager )
         {
             _jwtSettings = jwtSettings.Value;

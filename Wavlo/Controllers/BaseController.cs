@@ -10,7 +10,8 @@ namespace Wavlo.Controllers
     {
         protected string GetUserId()
         {
-            return User.FindFirst(ClaimTypes.NameIdentifier).Value;
+            var claim = User.FindFirst(ClaimTypes.NameIdentifier);
+            return claim?.Value ?? string.Empty;
         }
     }
 }

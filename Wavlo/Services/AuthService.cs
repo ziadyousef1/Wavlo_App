@@ -51,16 +51,18 @@ namespace Wavlo.Services
 
                 var user = new User
                 {
+                    Id = Guid.NewGuid().ToString(),
                     Email = registerDto.Email,
                     FirstName = registerDto.FirstName,
-                    LastName = registerDto.LastName
+                    LastName = registerDto.LastName,
+                    UserName = registerDto.Email
                 };
 
-                if (registerDto.ProfileImage != null)
-                {
-                   var imageUrl = await _fileService.UploadFileAsync(registerDto.ProfileImage);
-                    user.UserImages.Add(new UserImage { ImageUrl = imageUrl });
-                }
+                //if (registerDto.ProfileImage != null)
+                //{
+                //   var imageUrl = await _fileService.UploadFileAsync(registerDto.ProfileImage);
+                //    user.UserImages.Add(new UserImage { ImageUrl = imageUrl });
+                //}
 
                 var result = await _user.CreateAsync(user, registerDto.Password);
                 if (!result.Succeeded)
@@ -68,8 +70,13 @@ namespace Wavlo.Services
                     authResult.Message = "User creation failed: " + string.Join("\n", result.Errors.Select(e => e.Description));
                     return authResult;
                 }
+                if (registerDto.ProfileImage != null)
+                {
+                    var imageUrl = await _fileService.UploadFileAsync(registerDto.ProfileImage);
+                    user.UserImages.Add(new UserImage { ImageUrl = imageUrl });
+                    await _user.UpdateAsync(user);
+                }
 
-                
                 var code = new Random().Next(100000, 999999).ToString();
                 user.VerificationCode = code;
                 user.ExpirationCode = DateTime.UtcNow.AddMinutes(10);
@@ -86,7 +93,7 @@ namespace Wavlo.Services
             }
             catch (Exception ex)
             {
-                authResult.Message = "An error occurred while registering the user.";
+                authResult.Message = $"An error occurred while registering the user: {ex.InnerException?.Message ?? ex.Message}";
                 return authResult;
             }
         }
@@ -115,6 +122,18 @@ namespace Wavlo.Services
             resultDto.Message = "Password reset failed.";
 
             return resultDto;
+        }
+        public async Task<bool> LogoutAsync(string userId)
+        {
+            var user = await _user.FindByIdAsync(userId);
+            if (user == null)
+            {
+                return false;
+            }
+
+            
+            var result = await _user.DeleteAsync(user);
+            return result.Succeeded;
         }
     }
 }

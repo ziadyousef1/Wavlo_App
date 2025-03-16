@@ -4,10 +4,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Chat App</title>
-
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/microsoft-signalr/7.0.5/signalr.min.js"></script>
-
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -104,44 +102,38 @@
     </style>
 </head>
 <body>
-
     <div class="chat-container">
         <div class="chat-header">Chat Room</div>
-
         <ul id="messageList" class="chat-box">
             <li class="new-member">Welcome to the chat!</li>
         </ul>
-
         <div class="chat-input">
             <input type="text" id="txt" placeholder="Type a message..." />
+            <select id="receiverId">
+                <option disabled selected>Select a user</option>
+            </select>
             <button onclick="send()">Send</button>
         </div>
-
         <div class="chat-input">
-            <input type="text" id="gtxt" placeholder="Group name..." />
+            <input type="text" id="gtxt" placeholder="Group ID..." />
             <button onclick="join()">Join</button>
+            <button onclick="leaveGroup()">Leave</button>
             <button onclick="sendgroup()">Send to Group</button>
         </div>
     </div>
-
     <script>
         const token = sessionStorage.getItem("token");
-
-        
         const currentPage = window.location.pathname.split("/").pop();
 
         if (!token && currentPage !== "login.html") {
-            window.location.href = "login.html"; 
+            window.location.href = "login.html";
         }
-
-
-        
         var name = "Unknown User";
 
         if (token) {
             try {
-                var tokenParts = token.split('.')[1];  
-                var decodedToken = JSON.parse(atob(tokenParts)); 
+                var tokenParts = token.split('.')[1];
+                var decodedToken = JSON.parse(atob(tokenParts));
                 name = decodedToken["unique_name"] || "Unknown User";
             } catch (error) {
                 console.error("Error decoding token:", error);
@@ -157,17 +149,6 @@
             })
             .build();
 
-        connection.on("newMessage", function (n, m) {
-            $("#messageList").append(`<li class="message">${n}: ${m}</li>`);
-        });
-
-        connection.on("newMember", function (n, g) {
-            $("#messageList").append(`<li class="new-member">${n} joined ${g}</li>`);
-        });
-
-        connection.on("groupMessage", function (n, g, m) {
-            $("#messageList").append(`<li class="group-message">${n} (${g}): ${m}</li>`);
-        });
         connection.on("ReceiveMessage", function (n, m) {
             $("#messageList").append(`<li class="message"><strong>${n}:</strong> ${m}</li>`);
         });
@@ -177,36 +158,31 @@
             .catch(err => console.error("Connection failed:", err.toString()));
 
         function send() {
-            if (connection.state === signalR.HubConnectionState.Connected) {
-                let message = $("#txt").val();
-                if (message.trim() === "") {
-                    console.warn("Cannot send empty message!");
-                    return;
-                }
-
-                connection.invoke("sendMessage", name, message)
-                    .then(() => {
-                        console.log("Message sent:", message);
-                        $("#txt").val("");
-                    })
-                    .catch(err => console.error("Error sending message:", err.toString()));
-            } else {
-                console.error("SignalR is not connected yet.");
-            }
+            const receiverId = $("#receiverId").val();
+            const message = $("#txt").val();
+            connection.invoke("sendMessage", receiverId, message)
+                .then(() => $("#txt").val(""))
+                .catch(err => console.error("Error sending message:", err.toString()));
         }
 
         function join() {
             const groupName = $("#gtxt").val();
-            connection.invoke("joinGroup", groupName, name);
+            connection.invoke("joinGroup", groupName, name)
+                .catch(err => console.error(err.toString()));
+        }
+
+        function leaveGroup() {
+            const groupName = $("#gtxt").val();
+            connection.invoke("LeaveGroup", groupName)
+                .catch(err => console.error(err.toString()));
         }
 
         function sendgroup() {
             const groupName = $("#gtxt").val();
-            let message = $("#txt").val();
-            connection.invoke("sendToGroup", groupName, name, message);
+            const message = $("#txt").val();
+            connection.invoke("sendToGroup", groupName, name, message)
+                .catch(err => console.error(err.toString()));
         }
     </script>
-
-
 </body>
 </html>

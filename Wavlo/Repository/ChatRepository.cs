@@ -13,6 +13,7 @@ namespace Wavlo.Repository
         }
         public async Task<Message> CreateMessageAsync(int chatId, string message, string userId, string? attachmentUrl = null)
         {
+
             var newMessage = new Message
             {
                 ChatId = chatId,
@@ -33,7 +34,8 @@ namespace Wavlo.Repository
         {
             var chat = new Chat
             {
-                Type = ChatType.Private
+                Type = ChatType.Private,
+                Name = "Private Chat"
             };
 
             chat.Users.Add(new ChatUser

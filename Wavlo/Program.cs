@@ -13,6 +13,7 @@ using Wavlo.Services;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Wavlo.Models;
+using Wavlo.Repository;
 
 namespace Wavlo
 {
@@ -32,8 +33,8 @@ namespace Wavlo
                             .AddEntityFrameworkStores<ChatDbContext>()
                             .AddDefaultTokenProviders();
 
-            builder.Services.AddScoped<UserManager<User>>();
-            builder.Services.AddScoped<SignInManager<User>>();
+          //  builder.Services.AddScoped<UserManager<User>>();
+          //  builder.Services.AddScoped<SignInManager<User>>();
 
 
             builder.Services.AddDbContext<ChatDbContext>(options =>
@@ -47,13 +48,19 @@ namespace Wavlo
             builder.Services.AddTransient<ITokenService, TokenService>();
             builder.Services.AddTransient<IEmailSender, EmailSender>();
             builder.Services.AddScoped<IFileService, FileService>();
+            builder.Services.AddScoped<IChatRepository, ChatRepository>();
+
 
 
             builder.Services.AddSignalR();
-            var jwtOptions = builder.Configuration.GetSection("JWT").Get<JwtSettings>();
-            builder.Services.AddSingleton(jwtOptions);
-            builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
-                .AddJwtBearer(options =>
+            var jwtSettings = builder.Configuration.GetSection("JWT").Get<JwtSettings>();
+            builder.Services.Configure<JwtSettings>(builder.Configuration.GetSection("JWT"));
+            builder.Services.AddAuthentication(options =>
+            {
+                options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+                options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+
+            }).AddJwtBearer(options =>
                 {
                     options.SaveToken = true;
                     options.TokenValidationParameters = new TokenValidationParameters
@@ -62,17 +69,17 @@ namespace Wavlo
                         ValidateIssuer = true,
                         ValidateAudience = true,
                         ValidateLifetime = true,
-                        ValidIssuer = jwtOptions.Issuer,
-                        ValidAudience = jwtOptions.Audience,
-                        IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(jwtOptions.Key))
+                        ValidIssuer = jwtSettings.Issuer,
+                        ValidAudience = jwtSettings.Audience,
+                        IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(jwtSettings.Key))
                     };
 
-                   
+
                     options.Events = new JwtBearerEvents
                     {
                         OnMessageReceived = context =>
                         {
-                            var accessToken = context.Request.Query["access_token"];
+                            var accessToken = context.Request.Headers["access_token"];
                             var path = context.HttpContext.Request.Path;
                             if (!string.IsNullOrEmpty(accessToken) && path.StartsWithSegments("/hubs/chat"))
                             {

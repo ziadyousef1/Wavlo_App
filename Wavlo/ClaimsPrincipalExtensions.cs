@@ -6,7 +6,8 @@ namespace Wavlo
     {
         public static string GetUserId(this ClaimsPrincipal @this)
         {
-            return @this.FindFirst(ClaimTypes.NameIdentifier).Value;
+            var claim = @this?.FindFirst(ClaimTypes.NameIdentifier);
+            return claim?.Value ?? string.Empty;
         }
     }
 }
