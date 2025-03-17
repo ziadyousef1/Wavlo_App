@@ -30,8 +30,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>gwmolb5jx1</Fingerprint>
-      <Integrity>8Nrv7Hmfccsg2OIrmbVUbiAZqIaGg9petDGT4QflX2M=</Integrity>
+      <Fingerprint>sox4qiajf5</Fingerprint>
+      <Integrity>jMXlhETRjOgucs50lu/KJpGvxWZMFYeNL79hFUirQyc=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\forgetpassword.html'))</OriginalItemSpec>
@@ -48,8 +48,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>534ug78nw1</Fingerprint>
-      <Integrity>z8PRWnMWrqXWMteCtu6q0FP+y+bIlE2ucKVa8WyvJ0M=</Integrity>
+      <Fingerprint>03bu5n6pkb</Fingerprint>
+      <Integrity>nBRJjkkMWh9yolrZ5cN+lr7Rw0IFWI8TwEJpfKZjF8E=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\login.html'))</OriginalItemSpec>
@@ -126,6 +126,24 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\015f9cd6-740b-4db5-ac72-502dadee9242_Screenshot 2024-03-13 050247.png'))</OriginalItemSpec>
     </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\11e40f7b-b0b4-4d6b-9e43-f5aba2529a91_Screenshot 2025-02-14 001335.png'))">
+      <SourceType>Package</SourceType>
+      <SourceId>Wavlo</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Wavlo</BasePath>
+      <RelativePath>uploads/11e40f7b-b0b4-4d6b-9e43-f5aba2529a91_Screenshot 2025-02-14 001335.png</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>xgrjnycb3r</Fingerprint>
+      <Integrity>Ly8Kw0NBikX1jU61dwgjABR0RpHqOgWaxVe3ETX/6Gk=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\11e40f7b-b0b4-4d6b-9e43-f5aba2529a91_Screenshot 2025-02-14 001335.png'))</OriginalItemSpec>
+    </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\39a59219-a830-4c5c-9d57-3927d35edb81_Screenshot 2024-03-13 050247.png'))">
       <SourceType>Package</SourceType>
       <SourceId>Wavlo</SourceId>
@@ -179,6 +197,24 @@
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\4ab6798f-3124-43b7-b685-c104ba4b9753_Screenshot 2024-03-13 050247.png'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\606301c4-4f21-4f93-9809-8fed086866a7_Screenshot 2025-02-14 001335.png'))">
+      <SourceType>Package</SourceType>
+      <SourceId>Wavlo</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Wavlo</BasePath>
+      <RelativePath>uploads/606301c4-4f21-4f93-9809-8fed086866a7_Screenshot 2025-02-14 001335.png</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>xgrjnycb3r</Fingerprint>
+      <Integrity>Ly8Kw0NBikX1jU61dwgjABR0RpHqOgWaxVe3ETX/6Gk=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\606301c4-4f21-4f93-9809-8fed086866a7_Screenshot 2025-02-14 001335.png'))</OriginalItemSpec>
     </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\87d3acd5-f688-46cb-a3c0-2efa26df7deb_Tabib.png'))">
       <SourceType>Package</SourceType>

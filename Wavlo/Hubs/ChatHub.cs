@@ -6,10 +6,11 @@ using Wavlo.Models;
 
 namespace Wavlo
 {
+    [Authorize]
     public class ChatHub : Hub
     {
         private readonly ChatDbContext _context;
-        private static readonly Dictionary<int, string> UserConnections = new Dictionary<int, string>();
+        private static readonly Dictionary<string, string> UserConnections = new Dictionary<string, string>();
 
         public ChatHub(ChatDbContext context)
         {
@@ -19,30 +20,32 @@ namespace Wavlo
 
         public override async Task OnConnectedAsync()
         {
-            if (int.TryParse(Context.User?.FindFirst(ClaimTypes.NameIdentifier)?.Value, out int userId))
+            var user = _context.Users.FirstOrDefault(u => u.Id == Context.UserIdentifier);
+            if ( user is not null )
             {
-                UserConnections[userId] = Context.ConnectionId;
+                UserConnections[user.Id] = Context.ConnectionId;
             }
+            
 
-            var username = Context.User?.Identity?.Name ?? "Unknown User";
-            await Clients.Caller.SendAsync("ReceiveMessage", username, "Welcome to the chat!");
+            var username = user?.UserName ?? "Unknown User";
+             await Clients.Caller.SendAsync("ReceiveMessage", username, "Welcome to the chat!");
             await base.OnConnectedAsync();
         }
 
         public override async Task OnDisconnectedAsync(Exception? exception)
         {
-            if (int.TryParse(Context.User?.FindFirst(ClaimTypes.NameIdentifier)?.Value, out int userId))
-            {
-                UserConnections.Remove(userId);
-            }
+            var userId = Context.UserIdentifier;
+              UserConnections.Remove(userId);
+            
 
             var username = Context.User?.Identity?.Name ?? "Unknown User";
             await Clients.All.SendAsync("userDisconnected", username);
             await base.OnDisconnectedAsync(exception);
         }
 
-        public async Task sendMessage(int receiverId, string message, string? attachmentUrl = null)
+        public async Task sendMessage(string receiverId, string message, string? attachmentUrl = null)
         {
+            
             
             if (!int.TryParse(Context.User?.FindFirst(ClaimTypes.NameIdentifier)?.Value, out int senderId))
             {

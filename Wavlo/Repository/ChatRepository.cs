@@ -1,4 +1,6 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using System.Text.Json;
+using System.Text.Json.Serialization;
+using Microsoft.EntityFrameworkCore;
 using Wavlo.Data;
 using Wavlo.Models;
 
@@ -83,7 +85,7 @@ namespace Wavlo.Repository
             await _context.SaveChangesAsync();
 
             return chat.Id;
-
+            
         }
 
         public async Task<int> CreateRoomAsync(string name, string userId , bool isGroup = false)
@@ -137,9 +139,20 @@ namespace Wavlo.Repository
 
         public async Task<Chat> GetChatAsync(int id)
         {
-            return await _context.Chats
-                 .Include(x => x.Messages)
-                 .FirstOrDefaultAsync(x => x.Id == id);
+            {
+                var chat = await _context.Chats
+                    .Include(x => x.Messages)
+                    .FirstOrDefaultAsync(x => x.Id == id);
+
+                var options = new JsonSerializerOptions
+                {
+                    ReferenceHandler = ReferenceHandler.IgnoreCycles,
+                    WriteIndented = true
+                };
+
+                var json = JsonSerializer.Serialize(chat, options);
+                return JsonSerializer.Deserialize<Chat>(json, options);
+            }
         }
 
         public async Task<IEnumerable<Chat>> GetChatsAsync(string userId)
