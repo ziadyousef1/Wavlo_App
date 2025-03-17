@@ -20,5 +20,6 @@ wwwroot\uploads\92a66081-1895-4bec-9373-f192844ba274_photo_2025-02-16_02-33-11.j
 wwwroot\uploads\95c2cc9e-b720-47b8-8859-adeefef6fe3c_photo_2025-02-16_02-33-11.jpg
 wwwroot\uploads\9842ff52-0379-41d5-aef4-e0ad4ccc032f_Screenshot 2024-03-13 050247.png
 wwwroot\uploads\99894d52-5358-4493-ae2c-27c49509e80a_Screenshot 2024-03-13 050247.png
+wwwroot\uploads\f458c581-57b4-49ed-9504-3f04a2766d77_360_F_295949484_8BrlWkTrPXTYzgMn3UebDl1O13PcVNMU.webp
 wwwroot\uploads\f8553d68-72f0-4c85-bd7a-dee91a85cda4_Screenshot 2024-03-13 050247.png
 wwwroot\validate-otp.html

@@ -12,9 +12,5 @@
         public DateTime SentAt { get; set; }
         public string? AttachmentUrl { get; set; }
        
-
-
-
-
     }
 }

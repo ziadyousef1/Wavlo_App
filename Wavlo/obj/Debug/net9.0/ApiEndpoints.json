@@ -152,6 +152,11 @@
         "Name": "userId",
         "Type": "System.String",
         "IsRequired": false
+      },
+      {
+        "Name": "name",
+        "Type": "System.String",
+        "IsRequired": false
       }
     ],
     "ReturnTypes": []

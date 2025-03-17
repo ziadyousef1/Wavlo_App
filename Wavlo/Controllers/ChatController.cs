@@ -9,7 +9,7 @@ using Wavlo.DTOs;
 
 namespace Wavlo.Controllers
 {
-    //[Authorize]
+    [Authorize]
     [Route("api/[controller]")]
     [ApiController]
     public class ChatController : BaseController
@@ -76,7 +76,7 @@ namespace Wavlo.Controllers
             return Ok(chat);
         }
         [HttpPost("create-private-chat")]
-        public async Task<IActionResult> CreatePrivateChat(string userId)
+        public async Task<IActionResult> CreatePrivateChat(string userId , string name)
         {
             var rootUserId = User.GetUserId();
             if (string.IsNullOrEmpty(rootUserId))
@@ -84,7 +84,7 @@ namespace Wavlo.Controllers
                 return BadRequest("Invalid user ID");
             }
 
-            var chatId = await _repository.CreatePrivateRoomAsync(rootUserId, userId);
+            var chatId = await _repository.CreatePrivateRoomAsync(rootUserId, userId , name);
             return Ok(new { chatId });
         }
 
@@ -115,7 +115,11 @@ namespace Wavlo.Controllers
             if (string.IsNullOrEmpty(userId))
                 return Unauthorized("User ID not found");
 
-           
+
+            var chatExists = await _chatDb.Chats.AnyAsync(c => c.Id == dto.RoomId);
+            if (!chatExists)
+                return NotFound("Chat room not found");
+
             string attachmentType = "Text";
             if (!string.IsNullOrEmpty(dto.AttachmentUrl))
             {
@@ -131,7 +135,7 @@ namespace Wavlo.Controllers
             }
 
             
-            var messageEntity = await _repository.CreateMessageAsync(dto.RoomId, dto.Message, userId, dto.AttachmentUrl);
+            var messageEntity = await _repository.CreateMessageAsync(dto.RoomId, dto.Message, userId, dto.TargetUserId, dto.AttachmentUrl);
 
             if (messageEntity == null)
                 return BadRequest("Failed to send message");
@@ -139,7 +143,10 @@ namespace Wavlo.Controllers
             
             if (dto.IsPrivate && !string.IsNullOrEmpty(dto.TargetUserId))
             {
-                
+                var targetUserExists = await _chatDb.Users.FindAsync(dto.TargetUserId);
+                if (targetUserExists == null)
+                    return NotFound("Target user not found");
+
                 await _context.Clients.User(dto.TargetUserId)
                     .SendAsync("ReceiveMessage", new
                     {

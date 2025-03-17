@@ -36,6 +36,14 @@ namespace Wavlo.Data
                 .OnDelete(DeleteBehavior.Restrict);
 
 
+
+            modelBuilder.Entity<Message>()
+                .HasOne(m => m.Chat)
+                .WithMany(c => c.Messages)
+                .HasForeignKey(m => m.ChatId)
+                .OnDelete(DeleteBehavior.Cascade);
+
+
         }
     }
 }

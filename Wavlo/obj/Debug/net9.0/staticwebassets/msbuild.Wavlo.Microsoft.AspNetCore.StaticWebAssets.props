@@ -270,6 +270,24 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\99894d52-5358-4493-ae2c-27c49509e80a_Screenshot 2024-03-13 050247.png'))</OriginalItemSpec>
     </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\f458c581-57b4-49ed-9504-3f04a2766d77_360_F_295949484_8BrlWkTrPXTYzgMn3UebDl1O13PcVNMU.webp'))">
+      <SourceType>Package</SourceType>
+      <SourceId>Wavlo</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Wavlo</BasePath>
+      <RelativePath>uploads/f458c581-57b4-49ed-9504-3f04a2766d77_360_F_295949484_8BrlWkTrPXTYzgMn3UebDl1O13PcVNMU.webp</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>9p1a7bjna2</Fingerprint>
+      <Integrity>43WI7CF0/fzme60W+CDwB9+Z7hpRfFrKiPc3CYZAWAM=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\f458c581-57b4-49ed-9504-3f04a2766d77_360_F_295949484_8BrlWkTrPXTYzgMn3UebDl1O13PcVNMU.webp'))</OriginalItemSpec>
+    </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\f8553d68-72f0-4c85-bd7a-dee91a85cda4_Screenshot 2024-03-13 050247.png'))">
       <SourceType>Package</SourceType>
       <SourceId>Wavlo</SourceId>
