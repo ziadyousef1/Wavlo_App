@@ -1,83 +1,87 @@
 {
   "Files": [
     {
-      "Id": "D:\\Test\\Wavlo_Test\\Wavlo\\wwwroot\\chat.html",
+      "Id": "D:\\College\\LEVEL 3 (2)\\SW2\\Project\\Wavlo\\Wavlo\\wwwroot\\chat.html",
       "PackagePath": "staticwebassets\\chat.html"
     },
     {
-      "Id": "D:\\Test\\Wavlo_Test\\Wavlo\\wwwroot\\forgetpassword.html",
+      "Id": "D:\\College\\LEVEL 3 (2)\\SW2\\Project\\Wavlo\\Wavlo\\wwwroot\\forgetpassword.html",
       "PackagePath": "staticwebassets\\forgetpassword.html"
     },
     {
-      "Id": "D:\\Test\\Wavlo_Test\\Wavlo\\wwwroot\\login.html",
+      "Id": "D:\\College\\LEVEL 3 (2)\\SW2\\Project\\Wavlo\\Wavlo\\wwwroot\\login.html",
       "PackagePath": "staticwebassets\\login.html"
     },
     {
-      "Id": "D:\\Test\\Wavlo_Test\\Wavlo\\wwwroot\\logout.html",
+      "Id": "D:\\College\\LEVEL 3 (2)\\SW2\\Project\\Wavlo\\Wavlo\\wwwroot\\logout.html",
       "PackagePath": "staticwebassets\\logout.html"
     },
     {
-      "Id": "D:\\Test\\Wavlo_Test\\Wavlo\\wwwroot\\register.html",
+      "Id": "D:\\College\\LEVEL 3 (2)\\SW2\\Project\\Wavlo\\Wavlo\\wwwroot\\register.html",
       "PackagePath": "staticwebassets\\register.html"
     },
     {
-      "Id": "D:\\Test\\Wavlo_Test\\Wavlo\\wwwroot\\reset-password.html",
+      "Id": "D:\\College\\LEVEL 3 (2)\\SW2\\Project\\Wavlo\\Wavlo\\wwwroot\\reset-password.html",
       "PackagePath": "staticwebassets\\reset-password.html"
     },
     {
-      "Id": "D:\\Test\\Wavlo_Test\\Wavlo\\wwwroot\\uploads\\015f9cd6-740b-4db5-ac72-502dadee9242_Screenshot 2024-03-13 050247.png",
+      "Id": "D:\\College\\LEVEL 3 (2)\\SW2\\Project\\Wavlo\\Wavlo\\wwwroot\\uploads\\015f9cd6-740b-4db5-ac72-502dadee9242_Screenshot 2024-03-13 050247.png",
       "PackagePath": "staticwebassets\\uploads\\015f9cd6-740b-4db5-ac72-502dadee9242_Screenshot 2024-03-13 050247.png"
     },
     {
-      "Id": "D:\\Test\\Wavlo_Test\\Wavlo\\wwwroot\\uploads\\11e40f7b-b0b4-4d6b-9e43-f5aba2529a91_Screenshot 2025-02-14 001335.png",
-      "PackagePath": "staticwebassets\\uploads\\11e40f7b-b0b4-4d6b-9e43-f5aba2529a91_Screenshot 2025-02-14 001335.png"
+      "Id": "D:\\College\\LEVEL 3 (2)\\SW2\\Project\\Wavlo\\Wavlo\\wwwroot\\uploads\\15a83738-ad71-4acb-982a-85242541c5fe_photo_2025-03-05_17-07-44.jpg",
+      "PackagePath": "staticwebassets\\uploads\\15a83738-ad71-4acb-982a-85242541c5fe_photo_2025-03-05_17-07-44.jpg"
     },
     {
-      "Id": "D:\\Test\\Wavlo_Test\\Wavlo\\wwwroot\\uploads\\39a59219-a830-4c5c-9d57-3927d35edb81_Screenshot 2024-03-13 050247.png",
+      "Id": "D:\\College\\LEVEL 3 (2)\\SW2\\Project\\Wavlo\\Wavlo\\wwwroot\\uploads\\1db10fb4-4f17-42f5-aa9d-560cf75dd32e_photo_2025-03-05_17-07-44.jpg",
+      "PackagePath": "staticwebassets\\uploads\\1db10fb4-4f17-42f5-aa9d-560cf75dd32e_photo_2025-03-05_17-07-44.jpg"
+    },
+    {
+      "Id": "D:\\College\\LEVEL 3 (2)\\SW2\\Project\\Wavlo\\Wavlo\\wwwroot\\uploads\\2c208e46-778c-43e8-8a01-44d86f4756e9_photo_2025-02-16_02-33-11.jpg",
+      "PackagePath": "staticwebassets\\uploads\\2c208e46-778c-43e8-8a01-44d86f4756e9_photo_2025-02-16_02-33-11.jpg"
+    },
+    {
+      "Id": "D:\\College\\LEVEL 3 (2)\\SW2\\Project\\Wavlo\\Wavlo\\wwwroot\\uploads\\39a59219-a830-4c5c-9d57-3927d35edb81_Screenshot 2024-03-13 050247.png",
       "PackagePath": "staticwebassets\\uploads\\39a59219-a830-4c5c-9d57-3927d35edb81_Screenshot 2024-03-13 050247.png"
     },
     {
-      "Id": "D:\\Test\\Wavlo_Test\\Wavlo\\wwwroot\\uploads\\485a4e85-598a-491b-817b-1e31b495d24c_Screenshot 2024-03-13 050247.png",
+      "Id": "D:\\College\\LEVEL 3 (2)\\SW2\\Project\\Wavlo\\Wavlo\\wwwroot\\uploads\\485a4e85-598a-491b-817b-1e31b495d24c_Screenshot 2024-03-13 050247.png",
       "PackagePath": "staticwebassets\\uploads\\485a4e85-598a-491b-817b-1e31b495d24c_Screenshot 2024-03-13 050247.png"
     },
     {
-      "Id": "D:\\Test\\Wavlo_Test\\Wavlo\\wwwroot\\uploads\\4ab6798f-3124-43b7-b685-c104ba4b9753_Screenshot 2024-03-13 050247.png",
+      "Id": "D:\\College\\LEVEL 3 (2)\\SW2\\Project\\Wavlo\\Wavlo\\wwwroot\\uploads\\4ab6798f-3124-43b7-b685-c104ba4b9753_Screenshot 2024-03-13 050247.png",
       "PackagePath": "staticwebassets\\uploads\\4ab6798f-3124-43b7-b685-c104ba4b9753_Screenshot 2024-03-13 050247.png"
     },
     {
-      "Id": "D:\\Test\\Wavlo_Test\\Wavlo\\wwwroot\\uploads\\606301c4-4f21-4f93-9809-8fed086866a7_Screenshot 2025-02-14 001335.png",
-      "PackagePath": "staticwebassets\\uploads\\606301c4-4f21-4f93-9809-8fed086866a7_Screenshot 2025-02-14 001335.png"
-    },
-    {
-      "Id": "D:\\Test\\Wavlo_Test\\Wavlo\\wwwroot\\uploads\\87d3acd5-f688-46cb-a3c0-2efa26df7deb_Tabib.png",
+      "Id": "D:\\College\\LEVEL 3 (2)\\SW2\\Project\\Wavlo\\Wavlo\\wwwroot\\uploads\\87d3acd5-f688-46cb-a3c0-2efa26df7deb_Tabib.png",
       "PackagePath": "staticwebassets\\uploads\\87d3acd5-f688-46cb-a3c0-2efa26df7deb_Tabib.png"
     },
     {
-      "Id": "D:\\Test\\Wavlo_Test\\Wavlo\\wwwroot\\uploads\\92a66081-1895-4bec-9373-f192844ba274_photo_2025-02-16_02-33-11.jpg",
+      "Id": "D:\\College\\LEVEL 3 (2)\\SW2\\Project\\Wavlo\\Wavlo\\wwwroot\\uploads\\92a66081-1895-4bec-9373-f192844ba274_photo_2025-02-16_02-33-11.jpg",
       "PackagePath": "staticwebassets\\uploads\\92a66081-1895-4bec-9373-f192844ba274_photo_2025-02-16_02-33-11.jpg"
     },
     {
-      "Id": "D:\\Test\\Wavlo_Test\\Wavlo\\wwwroot\\uploads\\95c2cc9e-b720-47b8-8859-adeefef6fe3c_photo_2025-02-16_02-33-11.jpg",
+      "Id": "D:\\College\\LEVEL 3 (2)\\SW2\\Project\\Wavlo\\Wavlo\\wwwroot\\uploads\\95c2cc9e-b720-47b8-8859-adeefef6fe3c_photo_2025-02-16_02-33-11.jpg",
       "PackagePath": "staticwebassets\\uploads\\95c2cc9e-b720-47b8-8859-adeefef6fe3c_photo_2025-02-16_02-33-11.jpg"
     },
     {
-      "Id": "D:\\Test\\Wavlo_Test\\Wavlo\\wwwroot\\uploads\\9842ff52-0379-41d5-aef4-e0ad4ccc032f_Screenshot 2024-03-13 050247.png",
+      "Id": "D:\\College\\LEVEL 3 (2)\\SW2\\Project\\Wavlo\\Wavlo\\wwwroot\\uploads\\9842ff52-0379-41d5-aef4-e0ad4ccc032f_Screenshot 2024-03-13 050247.png",
       "PackagePath": "staticwebassets\\uploads\\9842ff52-0379-41d5-aef4-e0ad4ccc032f_Screenshot 2024-03-13 050247.png"
     },
     {
-      "Id": "D:\\Test\\Wavlo_Test\\Wavlo\\wwwroot\\uploads\\99894d52-5358-4493-ae2c-27c49509e80a_Screenshot 2024-03-13 050247.png",
+      "Id": "D:\\College\\LEVEL 3 (2)\\SW2\\Project\\Wavlo\\Wavlo\\wwwroot\\uploads\\99894d52-5358-4493-ae2c-27c49509e80a_Screenshot 2024-03-13 050247.png",
       "PackagePath": "staticwebassets\\uploads\\99894d52-5358-4493-ae2c-27c49509e80a_Screenshot 2024-03-13 050247.png"
     },
     {
-      "Id": "D:\\Test\\Wavlo_Test\\Wavlo\\wwwroot\\uploads\\f458c581-57b4-49ed-9504-3f04a2766d77_360_F_295949484_8BrlWkTrPXTYzgMn3UebDl1O13PcVNMU.webp",
+      "Id": "D:\\College\\LEVEL 3 (2)\\SW2\\Project\\Wavlo\\Wavlo\\wwwroot\\uploads\\f458c581-57b4-49ed-9504-3f04a2766d77_360_F_295949484_8BrlWkTrPXTYzgMn3UebDl1O13PcVNMU.webp",
       "PackagePath": "staticwebassets\\uploads\\f458c581-57b4-49ed-9504-3f04a2766d77_360_F_295949484_8BrlWkTrPXTYzgMn3UebDl1O13PcVNMU.webp"
     },
     {
-      "Id": "D:\\Test\\Wavlo_Test\\Wavlo\\wwwroot\\uploads\\f8553d68-72f0-4c85-bd7a-dee91a85cda4_Screenshot 2024-03-13 050247.png",
+      "Id": "D:\\College\\LEVEL 3 (2)\\SW2\\Project\\Wavlo\\Wavlo\\wwwroot\\uploads\\f8553d68-72f0-4c85-bd7a-dee91a85cda4_Screenshot 2024-03-13 050247.png",
       "PackagePath": "staticwebassets\\uploads\\f8553d68-72f0-4c85-bd7a-dee91a85cda4_Screenshot 2024-03-13 050247.png"
     },
     {
-      "Id": "D:\\Test\\Wavlo_Test\\Wavlo\\wwwroot\\validate-otp.html",
+      "Id": "D:\\College\\LEVEL 3 (2)\\SW2\\Project\\Wavlo\\Wavlo\\wwwroot\\validate-otp.html",
       "PackagePath": "staticwebassets\\validate-otp.html"
     },
     {

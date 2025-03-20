@@ -65,7 +65,7 @@
             align-self: flex-start;
         }
 
-        .new-member {
+        .new-member, .user-disconnected {
             font-style: italic;
             color: gray;
             text-align: center;
@@ -121,6 +121,7 @@
             <button onclick="sendgroup()">Send to Group</button>
         </div>
     </div>
+
     <script>
         const token = sessionStorage.getItem("token");
         const currentPage = window.location.pathname.split("/").pop();
@@ -143,14 +144,36 @@
         }
 
         console.log("Current User:", name);
+
         var connection = new signalR.HubConnectionBuilder()
             .withUrl("/hubs/chat", {
                 accessTokenFactory: () => sessionStorage.getItem("token")
             })
             .build();
 
-        connection.on("ReceiveMessage", function (n, m) {
-            $("#messageList").append(`<li class="message"><strong>${n}:</strong> ${m}</li>`);
+        // استقبال رسالة عادية
+        connection.on("ReceiveMessage", function (sender, message) {
+            $("#messageList").append(`<li class="message"><strong>${sender}:</strong> ${message}</li>`);
+        });
+
+        // استقبال رسالة جماعية
+        connection.on("groupMessage", function (sender, group, message) {
+            $("#messageList").append(`<li class="group-message"><strong>${sender} [${group}]:</strong> ${message}</li>`);
+        });
+
+        // إشعار انضمام عضو جديد
+        connection.on("newMember", function (name, group) {
+            $("#messageList").append(`<li class="new-member">${name} joined the group "${group}".</li>`);
+        });
+
+        // إشعار عند خروج عضو
+        connection.on("userLeft", function (name, group) {
+            $("#messageList").append(`<li class="user-disconnected">${name} left the group "${group}".</li>`);
+        });
+
+        // إشعار عند انقطاع الاتصال
+        connection.on("userDisconnected", function (username) {
+            $("#messageList").append(`<li class="user-disconnected">${username} has disconnected.</li>`);
         });
 
         connection.start()
@@ -181,6 +204,7 @@
             const groupName = $("#gtxt").val();
             const message = $("#txt").val();
             connection.invoke("sendToGroup", groupName, name, message)
+                .then(() => $("#txt").val(""))
                 .catch(err => console.error(err.toString()));
         }
     </script>

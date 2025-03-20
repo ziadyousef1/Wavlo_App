@@ -191,7 +191,6 @@ D:\College\LEVEL 3 (2)\SW2\Project\Wavlo\Wavlo\obj\Debug\net9.0\compressed\kvixz
 D:\College\LEVEL 3 (2)\SW2\Project\Wavlo\Wavlo\obj\Debug\net9.0\compressed\5bxykunjp1-4nik8oz83p.gz
 D:\College\LEVEL 3 (2)\SW2\Project\Wavlo\Wavlo\obj\Debug\net9.0\compressed\ihn66hkm2h-drsgb7vl0g.gz
 D:\College\LEVEL 3 (2)\SW2\Project\Wavlo\Wavlo\obj\Debug\net9.0\compressed\59onzdxu34-mpf9cqmccx.gz
-D:\College\LEVEL 3 (2)\SW2\Project\Wavlo\Wavlo\obj\Debug\net9.0\compressed\9mityhv4kf-alj5i8911r.gz
 D:\Test\Wavlo_Test\Wavlo\bin\Debug\net9.0\wwwroot\chat.html.gz
 D:\Test\Wavlo_Test\Wavlo\bin\Debug\net9.0\wwwroot\chat.html
 D:\Test\Wavlo_Test\Wavlo\bin\Debug\net9.0\appsettings.Development.json
@@ -387,3 +386,4 @@ D:\Test\Wavlo_Test\Wavlo\obj\Debug\net9.0\refint\Wavlo.dll
 D:\Test\Wavlo_Test\Wavlo\obj\Debug\net9.0\Wavlo.pdb
 D:\Test\Wavlo_Test\Wavlo\obj\Debug\net9.0\Wavlo.genruntimeconfig.cache
 D:\Test\Wavlo_Test\Wavlo\obj\Debug\net9.0\ref\Wavlo.dll
+D:\College\LEVEL 3 (2)\SW2\Project\Wavlo\Wavlo\obj\Debug\net9.0\compressed\9mityhv4kf-3s22pnvl5r.gz
