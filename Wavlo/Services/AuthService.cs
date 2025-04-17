@@ -1,5 +1,7 @@
 ﻿using Microsoft.AspNetCore.Identity;
 using Microsoft.Extensions.Options;
+using Newtonsoft.Json.Linq;
+using System.Web;
 using Wavlo.DTOs;
 using Wavlo.MailService;
 using Wavlo.Models;
@@ -16,7 +18,7 @@ namespace Wavlo.Services
         private readonly IFileService _fileService;
 
         public AuthService(ITokenService tokenService, UserManager<User> user, IEmailSender emailSender
-        , IOptions<JwtSettings> jwtSettings , IFileService fileService)
+        , IOptions<JwtSettings> jwtSettings, IFileService fileService)
         {
             _tokenService = tokenService;
             _user = user;
@@ -32,7 +34,22 @@ namespace Wavlo.Services
                 authRes.Message = "Invalid Email or Password";
                 return authRes;
             }
-            authRes.Token = await _tokenService.GenerateJwtToken(user);
+            var jwtToken = await _tokenService.GenerateJwtToken(user);
+            var refreshToken = _tokenService.GenerateRefreshToken();
+            var refreshTokenModel = new RefreshToken
+            {
+                Token = refreshToken,
+                CreatedOn = DateTime.UtcNow,
+                ExpiresOn = DateTime.UtcNow.AddDays(30),
+                IsRevoked = false
+            };
+
+            user.RefreshTokens ??= new List<RefreshToken>();
+            user.RefreshTokens.Add(refreshTokenModel);
+            await _user.UpdateAsync(user);
+
+            authRes.Token = jwtToken;
+            authRes.RefreshToken = refreshToken;
             authRes.IsSucceeded = true;
             return authRes;
         }
@@ -82,13 +99,29 @@ namespace Wavlo.Services
                 user.ExpirationCode = DateTime.UtcNow.AddMinutes(10);
                 await _user.UpdateAsync(user);
 
-                
+
                 var verificationCodeEmail = HtmlTemplate.GetVerificationCodeEmailTemplate(code);
                 var emailMessage = new EmailMessage(new[] { user.Email }, "Verification Code", verificationCodeEmail);
                 _emailSender.SendEmailAsync(emailMessage);
 
+                var jwtToken = await _tokenService.GenerateJwtToken(user);
+                var refreshToken = _tokenService.GenerateRefreshToken();
+                var refreshTokenModel = new RefreshToken
+                {
+                    Token = refreshToken,
+                    CreatedOn = DateTime.UtcNow,
+                    ExpiresOn = DateTime.UtcNow.AddDays(30),
+                    IsRevoked = false
+                };
+
+                user.RefreshTokens ??= new List<RefreshToken>();
+                user.RefreshTokens.Add(refreshTokenModel);
+                await _user.UpdateAsync(user);
+
                 authResult.IsSucceeded = true;
                 authResult.Message = "User registered successfully. Verification code sent to email.";
+                authResult.Token = jwtToken;
+                authResult.RefreshToken = refreshToken;
                 return authResult;
             }
             catch (Exception ex)
@@ -100,6 +133,30 @@ namespace Wavlo.Services
 
         public async Task<ResetPasswordResultDto> ResetPasswordAsync(ResetPasswordDto resetPasswordDto)
         {
+            //var resultDto = new ResetPasswordResultDto();
+
+            //var user = await _user.FindByEmailAsync(resetPasswordDto.Email);
+            //if (user == null)
+            //{
+            //    resultDto.Message = "User not found.";
+            //    return resultDto;
+            //}
+
+            //var decodedToken = HttpUtility.UrlDecode(resetPasswordDto.Token);
+
+
+            //var result = await _user.ResetPasswordAsync(user, decodedToken, resetPasswordDto.Password);
+
+            //if (result.Succeeded)
+            //{
+            //    resultDto.IsSucceeded = true;
+            //    return resultDto;
+            //}
+
+            //resultDto.Message = "Password reset failed.";
+            //resultDto.Errors = result.Errors.Select(e => e.Description).ToList();
+
+            //return resultDto;
             var resultDto = new ResetPasswordResultDto();
 
             var user = await _user.FindByEmailAsync(resetPasswordDto.Email);
@@ -131,7 +188,7 @@ namespace Wavlo.Services
                 return false;
             }
 
-            
+
             var result = await _user.DeleteAsync(user);
             return result.Succeeded;
         }

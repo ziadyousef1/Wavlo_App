@@ -12,17 +12,22 @@ wwwroot\logout.html
 wwwroot\register.html
 wwwroot\reset-password.html
 wwwroot\uploads\015f9cd6-740b-4db5-ac72-502dadee9242_Screenshot 2024-03-13 050247.png
+wwwroot\uploads\0f6a680e-bf6a-4388-a00d-19f76cd51607_photo_2025-03-05_17-07-44.jpg
 wwwroot\uploads\15a83738-ad71-4acb-982a-85242541c5fe_photo_2025-03-05_17-07-44.jpg
 wwwroot\uploads\1db10fb4-4f17-42f5-aa9d-560cf75dd32e_photo_2025-03-05_17-07-44.jpg
+wwwroot\uploads\2465807b-d6c9-4819-bf78-1044b32bb6a4_photo_2025-03-05_17-07-44.jpg
 wwwroot\uploads\2c208e46-778c-43e8-8a01-44d86f4756e9_photo_2025-02-16_02-33-11.jpg
 wwwroot\uploads\39a59219-a830-4c5c-9d57-3927d35edb81_Screenshot 2024-03-13 050247.png
 wwwroot\uploads\485a4e85-598a-491b-817b-1e31b495d24c_Screenshot 2024-03-13 050247.png
 wwwroot\uploads\4ab6798f-3124-43b7-b685-c104ba4b9753_Screenshot 2024-03-13 050247.png
+wwwroot\uploads\73d2cb88-fd85-490d-84df-4094e6beb3f9_photo_2025-03-05_17-07-44.jpg
 wwwroot\uploads\87d3acd5-f688-46cb-a3c0-2efa26df7deb_Tabib.png
 wwwroot\uploads\92a66081-1895-4bec-9373-f192844ba274_photo_2025-02-16_02-33-11.jpg
 wwwroot\uploads\95c2cc9e-b720-47b8-8859-adeefef6fe3c_photo_2025-02-16_02-33-11.jpg
 wwwroot\uploads\9842ff52-0379-41d5-aef4-e0ad4ccc032f_Screenshot 2024-03-13 050247.png
 wwwroot\uploads\99894d52-5358-4493-ae2c-27c49509e80a_Screenshot 2024-03-13 050247.png
+wwwroot\uploads\b4dc44aa-7bfc-46e9-ad6c-9a9f986408d3_photo_2025-03-05_17-07-44.jpg
+wwwroot\uploads\e7a9d4d6-1089-4d25-9109-3c93ed655fc1_photo_2025-03-05_17-07-44.jpg
 wwwroot\uploads\f458c581-57b4-49ed-9504-3f04a2766d77_360_F_295949484_8BrlWkTrPXTYzgMn3UebDl1O13PcVNMU.webp
 wwwroot\uploads\f8553d68-72f0-4c85-bd7a-dee91a85cda4_Screenshot 2024-03-13 050247.png
 wwwroot\validate-otp.html

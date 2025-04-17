@@ -12,6 +12,8 @@ namespace Wavlo.Data
         public DbSet<ChatUser> ChatUsers { get; set; }
         public DbSet<Message> Messages { get; set; }
         public DbSet<UserImage> UserImages { get; set; }
+        public DbSet<RefreshToken> RefreshTokens { get; set; }
+
         public ChatDbContext(DbContextOptions<ChatDbContext> options) : base(options)
         {
 

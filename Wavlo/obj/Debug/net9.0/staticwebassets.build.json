@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "/mWI85RstMmlJVLAlt4UZ4wHblm9wIixU9jdSFBaAfI=",
+  "Hash": "5eK22vrZr1ldfOKOuyqSzu5XZHob+hBHY2nRVM+DI8o=",
   "Source": "Wavlo",
   "BasePath": "_content/Wavlo",
   "Mode": "Default",
@@ -101,12 +101,12 @@
       "OriginalItemSpec": "D:\\College\\LEVEL 3 (2)\\SW2\\Project\\Wavlo\\Wavlo\\wwwroot\\register.html"
     },
     {
-      "Identity": "D:\\College\\LEVEL 3 (2)\\SW2\\Project\\Wavlo\\Wavlo\\obj\\Debug\\net9.0\\compressed\\9mityhv4kf-3s22pnvl5r.gz",
+      "Identity": "D:\\College\\LEVEL 3 (2)\\SW2\\Project\\Wavlo\\Wavlo\\obj\\Debug\\net9.0\\compressed\\9mityhv4kf-alj5i8911r.gz",
       "SourceId": "Wavlo",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\College\\LEVEL 3 (2)\\SW2\\Project\\Wavlo\\Wavlo\\obj\\Debug\\net9.0\\compressed\\",
       "BasePath": "_content/Wavlo",
-      "RelativePath": "chat#[.{fingerprint=3s22pnvl5r}]?.html.gz",
+      "RelativePath": "chat#[.{fingerprint=alj5i8911r}]?.html.gz",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Alternative",
@@ -115,8 +115,8 @@
       "RelatedAsset": "D:\\College\\LEVEL 3 (2)\\SW2\\Project\\Wavlo\\Wavlo\\wwwroot\\chat.html",
       "AssetTraitName": "Content-Encoding",
       "AssetTraitValue": "gzip",
-      "Fingerprint": "euz99m5gys",
-      "Integrity": "ti7ZBpGBl88gwYQzokv1E6e7CHWCaNb8lRPP1Kfh4bE=",
+      "Fingerprint": "vg59y9illd",
+      "Integrity": "7wkRleGF8C8EYwJwUq3igjYrUqd9RzmtXZycvD4ymjU=",
       "CopyToOutputDirectory": "Always",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "D:\\College\\LEVEL 3 (2)\\SW2\\Project\\Wavlo\\Wavlo\\wwwroot\\chat.html"
@@ -178,8 +178,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "3s22pnvl5r",
-      "Integrity": "kx92nwDEwQs2xKFyR6SPAHpRVzCvp2KyLZSTFP5afcs=",
+      "Fingerprint": "alj5i8911r",
+      "Integrity": "ksvGhy7Al6eI5MbXGW7kxTiKqtQlt03OsgSoDVgjB90=",
       "CopyToOutputDirectory": "Always",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\chat.html"
@@ -311,6 +311,27 @@
       "OriginalItemSpec": "wwwroot\\uploads\\015f9cd6-740b-4db5-ac72-502dadee9242_Screenshot 2024-03-13 050247.png"
     },
     {
+      "Identity": "D:\\College\\LEVEL 3 (2)\\SW2\\Project\\Wavlo\\Wavlo\\wwwroot\\uploads\\0f6a680e-bf6a-4388-a00d-19f76cd51607_photo_2025-03-05_17-07-44.jpg",
+      "SourceId": "Wavlo",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\College\\LEVEL 3 (2)\\SW2\\Project\\Wavlo\\Wavlo\\wwwroot\\",
+      "BasePath": "_content/Wavlo",
+      "RelativePath": "uploads/0f6a680e-bf6a-4388-a00d-19f76cd51607_photo_2025-03-05_17-07-44#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "24m022ur3r",
+      "Integrity": "DmbTPQjrZ4KSEVIK9dl1gk10SiOf7GpJNu0wRooCkhY=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\0f6a680e-bf6a-4388-a00d-19f76cd51607_photo_2025-03-05_17-07-44.jpg"
+    },
+    {
       "Identity": "D:\\College\\LEVEL 3 (2)\\SW2\\Project\\Wavlo\\Wavlo\\wwwroot\\uploads\\15a83738-ad71-4acb-982a-85242541c5fe_photo_2025-03-05_17-07-44.jpg",
       "SourceId": "Wavlo",
       "SourceType": "Discovered",
@@ -351,6 +372,27 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\uploads\\1db10fb4-4f17-42f5-aa9d-560cf75dd32e_photo_2025-03-05_17-07-44.jpg"
+    },
+    {
+      "Identity": "D:\\College\\LEVEL 3 (2)\\SW2\\Project\\Wavlo\\Wavlo\\wwwroot\\uploads\\2465807b-d6c9-4819-bf78-1044b32bb6a4_photo_2025-03-05_17-07-44.jpg",
+      "SourceId": "Wavlo",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\College\\LEVEL 3 (2)\\SW2\\Project\\Wavlo\\Wavlo\\wwwroot\\",
+      "BasePath": "_content/Wavlo",
+      "RelativePath": "uploads/2465807b-d6c9-4819-bf78-1044b32bb6a4_photo_2025-03-05_17-07-44#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "24m022ur3r",
+      "Integrity": "DmbTPQjrZ4KSEVIK9dl1gk10SiOf7GpJNu0wRooCkhY=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\2465807b-d6c9-4819-bf78-1044b32bb6a4_photo_2025-03-05_17-07-44.jpg"
     },
     {
       "Identity": "D:\\College\\LEVEL 3 (2)\\SW2\\Project\\Wavlo\\Wavlo\\wwwroot\\uploads\\2c208e46-778c-43e8-8a01-44d86f4756e9_photo_2025-02-16_02-33-11.jpg",
@@ -435,6 +477,27 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\uploads\\4ab6798f-3124-43b7-b685-c104ba4b9753_Screenshot 2024-03-13 050247.png"
+    },
+    {
+      "Identity": "D:\\College\\LEVEL 3 (2)\\SW2\\Project\\Wavlo\\Wavlo\\wwwroot\\uploads\\73d2cb88-fd85-490d-84df-4094e6beb3f9_photo_2025-03-05_17-07-44.jpg",
+      "SourceId": "Wavlo",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\College\\LEVEL 3 (2)\\SW2\\Project\\Wavlo\\Wavlo\\wwwroot\\",
+      "BasePath": "_content/Wavlo",
+      "RelativePath": "uploads/73d2cb88-fd85-490d-84df-4094e6beb3f9_photo_2025-03-05_17-07-44#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "24m022ur3r",
+      "Integrity": "DmbTPQjrZ4KSEVIK9dl1gk10SiOf7GpJNu0wRooCkhY=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\73d2cb88-fd85-490d-84df-4094e6beb3f9_photo_2025-03-05_17-07-44.jpg"
     },
     {
       "Identity": "D:\\College\\LEVEL 3 (2)\\SW2\\Project\\Wavlo\\Wavlo\\wwwroot\\uploads\\87d3acd5-f688-46cb-a3c0-2efa26df7deb_Tabib.png",
@@ -542,6 +605,48 @@
       "OriginalItemSpec": "wwwroot\\uploads\\99894d52-5358-4493-ae2c-27c49509e80a_Screenshot 2024-03-13 050247.png"
     },
     {
+      "Identity": "D:\\College\\LEVEL 3 (2)\\SW2\\Project\\Wavlo\\Wavlo\\wwwroot\\uploads\\b4dc44aa-7bfc-46e9-ad6c-9a9f986408d3_photo_2025-03-05_17-07-44.jpg",
+      "SourceId": "Wavlo",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\College\\LEVEL 3 (2)\\SW2\\Project\\Wavlo\\Wavlo\\wwwroot\\",
+      "BasePath": "_content/Wavlo",
+      "RelativePath": "uploads/b4dc44aa-7bfc-46e9-ad6c-9a9f986408d3_photo_2025-03-05_17-07-44#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "24m022ur3r",
+      "Integrity": "DmbTPQjrZ4KSEVIK9dl1gk10SiOf7GpJNu0wRooCkhY=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\b4dc44aa-7bfc-46e9-ad6c-9a9f986408d3_photo_2025-03-05_17-07-44.jpg"
+    },
+    {
+      "Identity": "D:\\College\\LEVEL 3 (2)\\SW2\\Project\\Wavlo\\Wavlo\\wwwroot\\uploads\\e7a9d4d6-1089-4d25-9109-3c93ed655fc1_photo_2025-03-05_17-07-44.jpg",
+      "SourceId": "Wavlo",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\College\\LEVEL 3 (2)\\SW2\\Project\\Wavlo\\Wavlo\\wwwroot\\",
+      "BasePath": "_content/Wavlo",
+      "RelativePath": "uploads/e7a9d4d6-1089-4d25-9109-3c93ed655fc1_photo_2025-03-05_17-07-44#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "24m022ur3r",
+      "Integrity": "DmbTPQjrZ4KSEVIK9dl1gk10SiOf7GpJNu0wRooCkhY=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\e7a9d4d6-1089-4d25-9109-3c93ed655fc1_photo_2025-03-05_17-07-44.jpg"
+    },
+    {
       "Identity": "D:\\College\\LEVEL 3 (2)\\SW2\\Project\\Wavlo\\Wavlo\\wwwroot\\uploads\\f458c581-57b4-49ed-9504-3f04a2766d77_360_F_295949484_8BrlWkTrPXTYzgMn3UebDl1O13PcVNMU.webp",
       "SourceId": "Wavlo",
       "SourceType": "Discovered",
@@ -607,13 +712,13 @@
   ],
   "Endpoints": [
     {
-      "Route": "chat.3s22pnvl5r.html",
-      "AssetFile": "D:\\College\\LEVEL 3 (2)\\SW2\\Project\\Wavlo\\Wavlo\\obj\\Debug\\net9.0\\compressed\\9mityhv4kf-3s22pnvl5r.gz",
+      "Route": "chat.alj5i8911r.html",
+      "AssetFile": "D:\\College\\LEVEL 3 (2)\\SW2\\Project\\Wavlo\\Wavlo\\obj\\Debug\\net9.0\\compressed\\9mityhv4kf-alj5i8911r.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
           "Value": "gzip",
-          "Quality": "0.000500000000"
+          "Quality": "0.000579374276"
         }
       ],
       "ResponseHeaders": [
@@ -623,15 +728,15 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "1999"
+          "Value": "1725"
         },
         {
           "Name": "ETag",
-          "Value": "\"ti7ZBpGBl88gwYQzokv1E6e7CHWCaNb8lRPP1Kfh4bE=\""
+          "Value": "\"7wkRleGF8C8EYwJwUq3igjYrUqd9RzmtXZycvD4ymjU=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 20 Mar 2025 04:57:11 GMT"
+          "Value": "Thu, 20 Mar 2025 05:02:41 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -651,13 +756,13 @@
         },
         {
           "Name": "ETag",
-          "Value": "W/\"kx92nwDEwQs2xKFyR6SPAHpRVzCvp2KyLZSTFP5afcs=\""
+          "Value": "W/\"ksvGhy7Al6eI5MbXGW7kxTiKqtQlt03OsgSoDVgjB90=\""
         }
       ],
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "3s22pnvl5r"
+          "Value": "alj5i8911r"
         },
         {
           "Name": "label",
@@ -665,12 +770,12 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-kx92nwDEwQs2xKFyR6SPAHpRVzCvp2KyLZSTFP5afcs="
+          "Value": "sha256-ksvGhy7Al6eI5MbXGW7kxTiKqtQlt03OsgSoDVgjB90="
         }
       ]
     },
     {
-      "Route": "chat.3s22pnvl5r.html",
+      "Route": "chat.alj5i8911r.html",
       "AssetFile": "D:\\College\\LEVEL 3 (2)\\SW2\\Project\\Wavlo\\Wavlo\\wwwroot\\chat.html",
       "Selectors": [],
       "ResponseHeaders": [
@@ -680,7 +785,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "7132"
+          "Value": "6012"
         },
         {
           "Name": "Content-Type",
@@ -688,11 +793,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"kx92nwDEwQs2xKFyR6SPAHpRVzCvp2KyLZSTFP5afcs=\""
+          "Value": "\"ksvGhy7Al6eI5MbXGW7kxTiKqtQlt03OsgSoDVgjB90=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 20 Mar 2025 04:57:11 GMT"
+          "Value": "Thu, 20 Mar 2025 05:02:41 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -702,7 +807,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "3s22pnvl5r"
+          "Value": "alj5i8911r"
         },
         {
           "Name": "label",
@@ -710,13 +815,13 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-kx92nwDEwQs2xKFyR6SPAHpRVzCvp2KyLZSTFP5afcs="
+          "Value": "sha256-ksvGhy7Al6eI5MbXGW7kxTiKqtQlt03OsgSoDVgjB90="
         }
       ]
     },
     {
-      "Route": "chat.3s22pnvl5r.html.gz",
-      "AssetFile": "D:\\College\\LEVEL 3 (2)\\SW2\\Project\\Wavlo\\Wavlo\\obj\\Debug\\net9.0\\compressed\\9mityhv4kf-3s22pnvl5r.gz",
+      "Route": "chat.alj5i8911r.html.gz",
+      "AssetFile": "D:\\College\\LEVEL 3 (2)\\SW2\\Project\\Wavlo\\Wavlo\\obj\\Debug\\net9.0\\compressed\\9mityhv4kf-alj5i8911r.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -725,7 +830,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "1999"
+          "Value": "1725"
         },
         {
           "Name": "Content-Type",
@@ -733,11 +838,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"ti7ZBpGBl88gwYQzokv1E6e7CHWCaNb8lRPP1Kfh4bE=\""
+          "Value": "\"7wkRleGF8C8EYwJwUq3igjYrUqd9RzmtXZycvD4ymjU=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 20 Mar 2025 04:57:11 GMT"
+          "Value": "Thu, 20 Mar 2025 05:02:41 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -755,7 +860,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "3s22pnvl5r"
+          "Value": "alj5i8911r"
         },
         {
           "Name": "label",
@@ -763,18 +868,18 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-ti7ZBpGBl88gwYQzokv1E6e7CHWCaNb8lRPP1Kfh4bE="
+          "Value": "sha256-7wkRleGF8C8EYwJwUq3igjYrUqd9RzmtXZycvD4ymjU="
         }
       ]
     },
     {
       "Route": "chat.html",
-      "AssetFile": "D:\\College\\LEVEL 3 (2)\\SW2\\Project\\Wavlo\\Wavlo\\obj\\Debug\\net9.0\\compressed\\9mityhv4kf-3s22pnvl5r.gz",
+      "AssetFile": "D:\\College\\LEVEL 3 (2)\\SW2\\Project\\Wavlo\\Wavlo\\obj\\Debug\\net9.0\\compressed\\9mityhv4kf-alj5i8911r.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
           "Value": "gzip",
-          "Quality": "0.000500000000"
+          "Quality": "0.000579374276"
         }
       ],
       "ResponseHeaders": [
@@ -784,15 +889,15 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "1999"
+          "Value": "1725"
         },
         {
           "Name": "ETag",
-          "Value": "\"ti7ZBpGBl88gwYQzokv1E6e7CHWCaNb8lRPP1Kfh4bE=\""
+          "Value": "\"7wkRleGF8C8EYwJwUq3igjYrUqd9RzmtXZycvD4ymjU=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 20 Mar 2025 04:57:11 GMT"
+          "Value": "Thu, 20 Mar 2025 05:02:41 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -812,13 +917,13 @@
         },
         {
           "Name": "ETag",
-          "Value": "W/\"kx92nwDEwQs2xKFyR6SPAHpRVzCvp2KyLZSTFP5afcs=\""
+          "Value": "W/\"ksvGhy7Al6eI5MbXGW7kxTiKqtQlt03OsgSoDVgjB90=\""
         }
       ],
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-kx92nwDEwQs2xKFyR6SPAHpRVzCvp2KyLZSTFP5afcs="
+          "Value": "sha256-ksvGhy7Al6eI5MbXGW7kxTiKqtQlt03OsgSoDVgjB90="
         }
       ]
     },
@@ -833,7 +938,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "7132"
+          "Value": "6012"
         },
         {
           "Name": "Content-Type",
@@ -841,11 +946,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"kx92nwDEwQs2xKFyR6SPAHpRVzCvp2KyLZSTFP5afcs=\""
+          "Value": "\"ksvGhy7Al6eI5MbXGW7kxTiKqtQlt03OsgSoDVgjB90=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 20 Mar 2025 04:57:11 GMT"
+          "Value": "Thu, 20 Mar 2025 05:02:41 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -855,13 +960,13 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-kx92nwDEwQs2xKFyR6SPAHpRVzCvp2KyLZSTFP5afcs="
+          "Value": "sha256-ksvGhy7Al6eI5MbXGW7kxTiKqtQlt03OsgSoDVgjB90="
         }
       ]
     },
     {
       "Route": "chat.html.gz",
-      "AssetFile": "D:\\College\\LEVEL 3 (2)\\SW2\\Project\\Wavlo\\Wavlo\\obj\\Debug\\net9.0\\compressed\\9mityhv4kf-3s22pnvl5r.gz",
+      "AssetFile": "D:\\College\\LEVEL 3 (2)\\SW2\\Project\\Wavlo\\Wavlo\\obj\\Debug\\net9.0\\compressed\\9mityhv4kf-alj5i8911r.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -870,7 +975,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "1999"
+          "Value": "1725"
         },
         {
           "Name": "Content-Type",
@@ -878,11 +983,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"ti7ZBpGBl88gwYQzokv1E6e7CHWCaNb8lRPP1Kfh4bE=\""
+          "Value": "\"7wkRleGF8C8EYwJwUq3igjYrUqd9RzmtXZycvD4ymjU=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 20 Mar 2025 04:57:11 GMT"
+          "Value": "Thu, 20 Mar 2025 05:02:41 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -900,7 +1005,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-ti7ZBpGBl88gwYQzokv1E6e7CHWCaNb8lRPP1Kfh4bE="
+          "Value": "sha256-7wkRleGF8C8EYwJwUq3igjYrUqd9RzmtXZycvD4ymjU="
         }
       ]
     },
@@ -2477,6 +2582,88 @@
       ]
     },
     {
+      "Route": "uploads/0f6a680e-bf6a-4388-a00d-19f76cd51607_photo_2025-03-05_17-07-44.24m022ur3r.jpg",
+      "AssetFile": "D:\\College\\LEVEL 3 (2)\\SW2\\Project\\Wavlo\\Wavlo\\wwwroot\\uploads\\0f6a680e-bf6a-4388-a00d-19f76cd51607_photo_2025-03-05_17-07-44.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "65090"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"DmbTPQjrZ4KSEVIK9dl1gk10SiOf7GpJNu0wRooCkhY=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 17 Apr 2025 11:37:49 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "24m022ur3r"
+        },
+        {
+          "Name": "label",
+          "Value": "uploads/0f6a680e-bf6a-4388-a00d-19f76cd51607_photo_2025-03-05_17-07-44.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-DmbTPQjrZ4KSEVIK9dl1gk10SiOf7GpJNu0wRooCkhY="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/0f6a680e-bf6a-4388-a00d-19f76cd51607_photo_2025-03-05_17-07-44.jpg",
+      "AssetFile": "D:\\College\\LEVEL 3 (2)\\SW2\\Project\\Wavlo\\Wavlo\\wwwroot\\uploads\\0f6a680e-bf6a-4388-a00d-19f76cd51607_photo_2025-03-05_17-07-44.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "65090"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"DmbTPQjrZ4KSEVIK9dl1gk10SiOf7GpJNu0wRooCkhY=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 17 Apr 2025 11:37:49 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-DmbTPQjrZ4KSEVIK9dl1gk10SiOf7GpJNu0wRooCkhY="
+        }
+      ]
+    },
+    {
       "Route": "uploads/15a83738-ad71-4acb-982a-85242541c5fe_photo_2025-03-05_17-07-44.24m022ur3r.jpg",
       "AssetFile": "D:\\College\\LEVEL 3 (2)\\SW2\\Project\\Wavlo\\Wavlo\\wwwroot\\uploads\\15a83738-ad71-4acb-982a-85242541c5fe_photo_2025-03-05_17-07-44.jpg",
       "Selectors": [],
@@ -2627,6 +2814,88 @@
         {
           "Name": "Last-Modified",
           "Value": "Tue, 18 Mar 2025 00:03:28 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-DmbTPQjrZ4KSEVIK9dl1gk10SiOf7GpJNu0wRooCkhY="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/2465807b-d6c9-4819-bf78-1044b32bb6a4_photo_2025-03-05_17-07-44.24m022ur3r.jpg",
+      "AssetFile": "D:\\College\\LEVEL 3 (2)\\SW2\\Project\\Wavlo\\Wavlo\\wwwroot\\uploads\\2465807b-d6c9-4819-bf78-1044b32bb6a4_photo_2025-03-05_17-07-44.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "65090"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"DmbTPQjrZ4KSEVIK9dl1gk10SiOf7GpJNu0wRooCkhY=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 17 Apr 2025 11:19:28 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "24m022ur3r"
+        },
+        {
+          "Name": "label",
+          "Value": "uploads/2465807b-d6c9-4819-bf78-1044b32bb6a4_photo_2025-03-05_17-07-44.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-DmbTPQjrZ4KSEVIK9dl1gk10SiOf7GpJNu0wRooCkhY="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/2465807b-d6c9-4819-bf78-1044b32bb6a4_photo_2025-03-05_17-07-44.jpg",
+      "AssetFile": "D:\\College\\LEVEL 3 (2)\\SW2\\Project\\Wavlo\\Wavlo\\wwwroot\\uploads\\2465807b-d6c9-4819-bf78-1044b32bb6a4_photo_2025-03-05_17-07-44.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "65090"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"DmbTPQjrZ4KSEVIK9dl1gk10SiOf7GpJNu0wRooCkhY=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 17 Apr 2025 11:19:28 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2965,6 +3234,88 @@
         {
           "Name": "integrity",
           "Value": "sha256-DjvRdI7+F3jJ6MAqd3mUjEue8SnC4SwYk8qGgAYGfwU="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/73d2cb88-fd85-490d-84df-4094e6beb3f9_photo_2025-03-05_17-07-44.24m022ur3r.jpg",
+      "AssetFile": "D:\\College\\LEVEL 3 (2)\\SW2\\Project\\Wavlo\\Wavlo\\wwwroot\\uploads\\73d2cb88-fd85-490d-84df-4094e6beb3f9_photo_2025-03-05_17-07-44.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "65090"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"DmbTPQjrZ4KSEVIK9dl1gk10SiOf7GpJNu0wRooCkhY=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 17 Apr 2025 10:47:12 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "24m022ur3r"
+        },
+        {
+          "Name": "label",
+          "Value": "uploads/73d2cb88-fd85-490d-84df-4094e6beb3f9_photo_2025-03-05_17-07-44.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-DmbTPQjrZ4KSEVIK9dl1gk10SiOf7GpJNu0wRooCkhY="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/73d2cb88-fd85-490d-84df-4094e6beb3f9_photo_2025-03-05_17-07-44.jpg",
+      "AssetFile": "D:\\College\\LEVEL 3 (2)\\SW2\\Project\\Wavlo\\Wavlo\\wwwroot\\uploads\\73d2cb88-fd85-490d-84df-4094e6beb3f9_photo_2025-03-05_17-07-44.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "65090"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"DmbTPQjrZ4KSEVIK9dl1gk10SiOf7GpJNu0wRooCkhY=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 17 Apr 2025 10:47:12 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-DmbTPQjrZ4KSEVIK9dl1gk10SiOf7GpJNu0wRooCkhY="
         }
       ]
     },
@@ -3375,6 +3726,170 @@
         {
           "Name": "integrity",
           "Value": "sha256-DjvRdI7+F3jJ6MAqd3mUjEue8SnC4SwYk8qGgAYGfwU="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/b4dc44aa-7bfc-46e9-ad6c-9a9f986408d3_photo_2025-03-05_17-07-44.24m022ur3r.jpg",
+      "AssetFile": "D:\\College\\LEVEL 3 (2)\\SW2\\Project\\Wavlo\\Wavlo\\wwwroot\\uploads\\b4dc44aa-7bfc-46e9-ad6c-9a9f986408d3_photo_2025-03-05_17-07-44.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "65090"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"DmbTPQjrZ4KSEVIK9dl1gk10SiOf7GpJNu0wRooCkhY=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 17 Apr 2025 11:32:56 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "24m022ur3r"
+        },
+        {
+          "Name": "label",
+          "Value": "uploads/b4dc44aa-7bfc-46e9-ad6c-9a9f986408d3_photo_2025-03-05_17-07-44.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-DmbTPQjrZ4KSEVIK9dl1gk10SiOf7GpJNu0wRooCkhY="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/b4dc44aa-7bfc-46e9-ad6c-9a9f986408d3_photo_2025-03-05_17-07-44.jpg",
+      "AssetFile": "D:\\College\\LEVEL 3 (2)\\SW2\\Project\\Wavlo\\Wavlo\\wwwroot\\uploads\\b4dc44aa-7bfc-46e9-ad6c-9a9f986408d3_photo_2025-03-05_17-07-44.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "65090"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"DmbTPQjrZ4KSEVIK9dl1gk10SiOf7GpJNu0wRooCkhY=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 17 Apr 2025 11:32:56 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-DmbTPQjrZ4KSEVIK9dl1gk10SiOf7GpJNu0wRooCkhY="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/e7a9d4d6-1089-4d25-9109-3c93ed655fc1_photo_2025-03-05_17-07-44.24m022ur3r.jpg",
+      "AssetFile": "D:\\College\\LEVEL 3 (2)\\SW2\\Project\\Wavlo\\Wavlo\\wwwroot\\uploads\\e7a9d4d6-1089-4d25-9109-3c93ed655fc1_photo_2025-03-05_17-07-44.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "65090"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"DmbTPQjrZ4KSEVIK9dl1gk10SiOf7GpJNu0wRooCkhY=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 17 Apr 2025 10:51:24 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "24m022ur3r"
+        },
+        {
+          "Name": "label",
+          "Value": "uploads/e7a9d4d6-1089-4d25-9109-3c93ed655fc1_photo_2025-03-05_17-07-44.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-DmbTPQjrZ4KSEVIK9dl1gk10SiOf7GpJNu0wRooCkhY="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/e7a9d4d6-1089-4d25-9109-3c93ed655fc1_photo_2025-03-05_17-07-44.jpg",
+      "AssetFile": "D:\\College\\LEVEL 3 (2)\\SW2\\Project\\Wavlo\\Wavlo\\wwwroot\\uploads\\e7a9d4d6-1089-4d25-9109-3c93ed655fc1_photo_2025-03-05_17-07-44.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "65090"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"DmbTPQjrZ4KSEVIK9dl1gk10SiOf7GpJNu0wRooCkhY=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 17 Apr 2025 10:51:24 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-DmbTPQjrZ4KSEVIK9dl1gk10SiOf7GpJNu0wRooCkhY="
         }
       ]
     },

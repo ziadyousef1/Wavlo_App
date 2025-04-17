@@ -14,5 +14,7 @@ namespace Wavlo.DTOs
         [Compare("Password", ErrorMessage = "Password does not match")]
         public string confirmPassword { get; set; }
 
+        
+
     }
 }

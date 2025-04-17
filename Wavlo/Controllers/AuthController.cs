@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Authentication;
+﻿using Azure.Core;
+using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.Data;
@@ -28,28 +29,45 @@ namespace Wavlo.Controllers
         private readonly IOptions<JwtSettings> _jwtSettings;
         private readonly IAuthService _authService;
         private readonly IFileService _fileService;
+        private readonly ITokenService _tokenService;
+        private readonly ChatDbContext _context;
         public AuthController(UserManager<User> user, IEmailSender emailSender
-        , IOptions<JwtSettings> jwtSettings, IAuthService authService, IFileService fileService)
+        , IOptions<JwtSettings> jwtSettings, IAuthService authService, IFileService fileService, ITokenService tokenService,ChatDbContext context)
         {
             _user = user;
             _emailSender = emailSender;
             _jwtSettings = jwtSettings;
             _authService = authService;
             _fileService = fileService;
+            _tokenService = tokenService;
+            _context = context;
         }
 
 
         [HttpPost("login")]
         public async Task<IActionResult> Login(LoginDto login)
         {
-            var user = await _authService.LoginAsync(login);
+            var result = await _authService.LoginAsync(login);
 
-            if (user.IsSucceeded)
+            if (!result.IsSucceeded)
+                return BadRequest(result);
+
+
+            var cookieOptions = new CookieOptions
             {
-                return Ok(user);
-            }
+                HttpOnly = true,
+                Expires = DateTime.UtcNow.AddDays(30),
+                Secure = true,
+                SameSite = SameSiteMode.Strict
+            };
+            Response.Cookies.Append("refreshToken", result.RefreshToken!, cookieOptions);
 
-            return BadRequest(user);
+
+            return Ok(new
+            {
+                token = result.Token,
+                refreshToken = result.RefreshToken
+            });
         }
 
         [HttpPost("register")]
@@ -81,12 +99,16 @@ namespace Wavlo.Controllers
 
             await _user.UpdateAsync(user);
 
-            var enumerable = new List<string> { otpRequest.Email };
-            var message = new EmailMessage(enumerable, "Otp For Reset Password", HtmlTemplate.GetVerificationCodeEmailTemplate(code));
+            var token = await _user.GeneratePasswordResetTokenAsync(user);
 
-            _emailSender.SendEmailAsync(message);
+            var message = new EmailMessage(
+                new List<string> { otpRequest.Email },
+                "OTP For Reset Password",
+                HtmlTemplate.GetVerificationCodeEmailTemplate(code));
 
-            return Ok(code);
+            await _emailSender.SendEmailAsync(message);
+
+            return Ok(new { Token = token });
         }
         [HttpPost("validate-otp")]
         public async Task<IActionResult> ValidateOtp([FromBody] ValidateOtpRequest request)
@@ -103,7 +125,7 @@ namespace Wavlo.Controllers
                 user.VerificationCode = null;
                 user.ExpirationCode = null;
                 await _user.UpdateAsync(user);
-                return Ok(token);
+                return Ok(new { Token = token });
             }
 
             return BadRequest("Invalid OR Expired OTP.");
@@ -118,60 +140,88 @@ namespace Wavlo.Controllers
             if (res.IsSucceeded)
                 return Ok();
 
-            return BadRequest(new { res.Message });
+            return BadRequest(new
+            {
+                message = res.Message,
+                errors = res.Errors 
+            });
 
         }
         [HttpPost("logout")]
         public async Task<IActionResult> LogoutAndDeleteAccount()
         {
-            
             var userIdClaim = User.FindFirst(ClaimTypes.NameIdentifier);
             if (userIdClaim == null)
-            {
                 return Unauthorized("User not authenticated.");
-            }
 
             var userId = userIdClaim.Value;
 
-            
             var user = await _user.FindByIdAsync(userId);
             if (user == null)
-            {
                 return NotFound("User not found.");
-            }
+
+            
+            var refreshToken = Request.Cookies["refreshToken"];
+            if (string.IsNullOrEmpty(refreshToken))
+                return Unauthorized("Refresh token is missing.");
+
+            var storedToken = await _tokenService.GetRefreshToken(refreshToken);
+            if (storedToken == null || storedToken.IsRevoked || storedToken.IsExpired)
+                return Unauthorized("Invalid or expired refresh token.");
+
+            
+            await _tokenService.RevokeRefreshToken(storedToken.Token);
+
+            
+            Response.Cookies.Delete("refreshToken");
+
+           
+            var chatUsers = _context.ChatUsers.Where(c => c.UserId == user.Id);
+            _context.ChatUsers.RemoveRange(chatUsers);
+            await _context.SaveChangesAsync();
 
            
             var result = await _user.DeleteAsync(user);
             if (!result.Succeeded)
-            {
                 return StatusCode(500, "Failed to delete the account.");
-            }
+
+            return Ok("Account deleted and logged out successfully.");
+        }
+        [HttpPost("refresh")]
+        public async Task<IActionResult> RefreshToken()
+        {
+            var refreshToken = Request.Cookies["refreshToken"];
+            if (string.IsNullOrEmpty(refreshToken))
+                return Unauthorized("Refresh token is missing.");
+
+            var storedToken = await _tokenService.GetRefreshToken(refreshToken);
+            if (storedToken == null || storedToken.IsRevoked || storedToken.IsExpired)
+                return Unauthorized("Invalid or expired refresh token.");
+
+            var user = storedToken.User;
+            if (user == null)
+                return Unauthorized("User not found.");
 
             
-            await HttpContext.SignOutAsync();
+            var newRefreshToken = await _tokenService.RotateRefreshToken(storedToken);
+            var newAccessToken = await _tokenService.GenerateJwtToken(user);
 
-           
-            return Ok("Account deleted successfully.");
+            
+            Response.Cookies.Append("refreshToken", newRefreshToken.Token, new CookieOptions
+            {
+                HttpOnly = true,
+                Secure = true, 
+                SameSite = SameSiteMode.Strict,
+                Expires = newRefreshToken.ExpiresOn
+            });
+
+            
+            return Ok(new
+            {
+                token = newAccessToken,
+                refreshToken = newRefreshToken.Token
+            });
         }
 
-
-
-        //[HttpPost("authenticate")]
-        //public IActionResult Authenticate([FromBody] LoginRequestModel login)
-        //{
-        //    var user = _context.Users.SingleOrDefault(u => u.Username == login.Username);
-        //    if (user == null || !BCrypt.Net.BCrypt.Verify(login.Password, user.PasswordHash))
-        //        return Unauthorized();
-
-        //    var token = GenerateJwtToken(user.Id);
-        //    return Ok(new { token });
-        //}
-
-
-
-        //    //var token = GenerateJwtToken(user.Id , user.Username);
-
-        //   // return Ok(new { token });
-        //} 
     }
 }

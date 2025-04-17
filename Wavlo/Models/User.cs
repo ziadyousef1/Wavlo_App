@@ -21,5 +21,8 @@ namespace Wavlo.Models
         public ICollection<ChatUser> Chats { get; set; }
         [ValidateNever]
         public List<UserImage> UserImages { get; set; }
+
+        public List<RefreshToken>? RefreshTokens { get; set; } 
+
     }
 }
