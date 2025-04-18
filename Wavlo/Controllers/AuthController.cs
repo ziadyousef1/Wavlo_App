@@ -32,7 +32,7 @@ namespace Wavlo.Controllers
         private readonly ITokenService _tokenService;
         private readonly ChatDbContext _context;
         public AuthController(UserManager<User> user, IEmailSender emailSender
-        , IOptions<JwtSettings> jwtSettings, IAuthService authService, IFileService fileService, ITokenService tokenService,ChatDbContext context)
+        , IOptions<JwtSettings> jwtSettings, IAuthService authService, IFileService fileService, ITokenService tokenService, ChatDbContext context)
         {
             _user = user;
             _emailSender = emailSender;
@@ -108,7 +108,7 @@ namespace Wavlo.Controllers
 
             await _emailSender.SendEmailAsync(message);
 
-            return Ok(new { Token = token });
+            return Ok("OTP Sent Successfully :)");
         }
         [HttpPost("validate-otp")]
         public async Task<IActionResult> ValidateOtp([FromBody] ValidateOtpRequest request)
@@ -125,7 +125,7 @@ namespace Wavlo.Controllers
                 user.VerificationCode = null;
                 user.ExpirationCode = null;
                 await _user.UpdateAsync(user);
-                return Ok(new { Token = token });
+                return Ok("OTP Verified Successfully !");
             }
 
             return BadRequest("Invalid OR Expired OTP.");
@@ -143,7 +143,7 @@ namespace Wavlo.Controllers
             return BadRequest(new
             {
                 message = res.Message,
-                errors = res.Errors 
+                errors = res.Errors
             });
 
         }
@@ -160,7 +160,7 @@ namespace Wavlo.Controllers
             if (user == null)
                 return NotFound("User not found.");
 
-            
+
             var refreshToken = Request.Cookies["refreshToken"];
             if (string.IsNullOrEmpty(refreshToken))
                 return Unauthorized("Refresh token is missing.");
@@ -169,18 +169,18 @@ namespace Wavlo.Controllers
             if (storedToken == null || storedToken.IsRevoked || storedToken.IsExpired)
                 return Unauthorized("Invalid or expired refresh token.");
 
-            
+
             await _tokenService.RevokeRefreshToken(storedToken.Token);
 
-            
+
             Response.Cookies.Delete("refreshToken");
 
-           
+
             var chatUsers = _context.ChatUsers.Where(c => c.UserId == user.Id);
             _context.ChatUsers.RemoveRange(chatUsers);
             await _context.SaveChangesAsync();
 
-           
+
             var result = await _user.DeleteAsync(user);
             if (!result.Succeeded)
                 return StatusCode(500, "Failed to delete the account.");
@@ -202,20 +202,20 @@ namespace Wavlo.Controllers
             if (user == null)
                 return Unauthorized("User not found.");
 
-            
+
             var newRefreshToken = await _tokenService.RotateRefreshToken(storedToken);
             var newAccessToken = await _tokenService.GenerateJwtToken(user);
 
-            
+
             Response.Cookies.Append("refreshToken", newRefreshToken.Token, new CookieOptions
             {
                 HttpOnly = true,
-                Secure = true, 
+                Secure = true,
                 SameSite = SameSiteMode.Strict,
                 Expires = newRefreshToken.ExpiresOn
             });
 
-            
+
             return Ok(new
             {
                 token = newAccessToken,

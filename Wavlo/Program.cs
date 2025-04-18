@@ -14,6 +14,11 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Wavlo.Models;
 using Wavlo.Repository;
+using Wavlo.CloudStorage.CloudService;
+using Wavlo.CloudStorage.StorageSettings;
+using Azure.Storage.Blobs;
+using Microsoft.Extensions.Options;
+using Asp.Versioning;
 
 namespace Wavlo
 {
@@ -23,8 +28,21 @@ namespace Wavlo
         {
             var builder = WebApplication.CreateBuilder(args);
 
+            //Api Versioning
+            builder.Services.AddApiVersioning(o =>
+            {
+                o.AssumeDefaultVersionWhenUnspecified = true;
+                o.DefaultApiVersion = new ApiVersion(1, 0);
+                o.ReportApiVersions = true;
+                o.ApiVersionReader = ApiVersionReader.Combine(new QueryStringApiVersionReader("api-version"),
+                    new HeaderApiVersionReader("X-version"),
+                    new MediaTypeApiVersionReader("ver"));
+            }).AddApiExplorer(options =>
+            {
+                options.GroupNameFormat = "'v'VVV";
+                options.SubstituteApiVersionInUrl = true;
+            });
             // Add services to the container.
-
             builder.Services.AddControllers();
             // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
             builder.Services.AddOpenApi();
@@ -33,8 +51,8 @@ namespace Wavlo
                             .AddEntityFrameworkStores<ChatDbContext>()
                             .AddDefaultTokenProviders();
 
-          //  builder.Services.AddScoped<UserManager<User>>();
-          //  builder.Services.AddScoped<SignInManager<User>>();
+            //  builder.Services.AddScoped<UserManager<User>>();
+            //  builder.Services.AddScoped<SignInManager<User>>();
 
 
             builder.Services.AddDbContext<ChatDbContext>(options =>
@@ -49,6 +67,17 @@ namespace Wavlo
             builder.Services.AddTransient<IEmailSender, EmailSender>();
             builder.Services.AddScoped<IFileService, FileService>();
             builder.Services.AddScoped<IChatRepository, ChatRepository>();
+            builder.Services.AddScoped<ICloudStorageService, CloudStorageService>();
+            builder.Services.Configure<CloudStorageSettings>(builder.Configuration.GetSection(CloudStorageSettings.AzureStorage));
+
+            builder.Services.AddSingleton(sp =>
+                sp.GetRequiredService<IOptions<CloudStorageSettings>>().Value);
+
+            builder.Services.AddSingleton(sp =>
+            {
+                var settings = sp.GetRequiredService<IOptions<CloudStorageSettings>>().Value;
+                return new BlobServiceClient(settings.ConnectionString);
+            });
 
 
 
@@ -89,6 +118,17 @@ namespace Wavlo
                         }
                     };
                 });
+            builder.Services.AddCors(options =>
+            {
+                options.AddDefaultPolicy(policy =>
+                {
+                    policy
+                        .AllowAnyOrigin()
+                        .AllowAnyHeader()
+                        .AllowAnyMethod();
+                });
+            });
+
             var app = builder.Build();
 
             // Configure the HTTP request pipeline.
@@ -99,8 +139,8 @@ namespace Wavlo
             }
 
             app.UseHttpsRedirection();
-            app.UseStaticFiles(); 
-            app.UseRouting(); 
+            app.UseStaticFiles();
+            app.UseRouting();
             app.UseAuthentication();
             app.UseAuthorization();
 

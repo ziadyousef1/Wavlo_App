@@ -11,6 +11,7 @@ namespace Wavlo.Services
     public class AuthService : IAuthService
     {
 
+
         private readonly ITokenService _tokenService;
         private readonly UserManager<User> _user;
         private readonly IEmailSender _emailSender;
@@ -166,9 +167,9 @@ namespace Wavlo.Services
                 return resultDto;
             }
 
-            var oldPassword = user.PasswordHash;
-            var result = await _user.ResetPasswordAsync(user, resetPasswordDto.Token, resetPasswordDto.confirmPassword);
-            var newPassword = user.PasswordHash;
+            var passwordHashed = _user.PasswordHasher.HashPassword(user, resetPasswordDto.Password);
+            user.PasswordHash = passwordHashed;
+            var result = await _user.UpdateAsync(user);
 
             if (result.Succeeded)
             {

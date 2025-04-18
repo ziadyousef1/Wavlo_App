@@ -43,14 +43,35 @@ namespace Wavlo.Controllers
         public async Task<IActionResult> GetChats()
         {
             var chats = await _repository.GetChatsAsync(GetUserId());
-            return Ok(chats);
+
+            
+            var chatDtos = chats.Select(c => new ChatDto
+            {
+                Id = c.Id,
+                Name = c.Name,
+                IsGroup = c.IsGroup,
+                Type = c.Type.ToString(),
+                UserIds = c.Users.Select(u => u.UserId).ToList()
+            }).ToList();
+
+            return Ok(chatDtos);
         }
 
         [HttpGet("private")]
         public async Task<IActionResult> PrivateChat()
         {
             var chats = await _repository.GetPrivateChatsAsync(GetUserId());
-            return Ok(chats);
+
+            var chatDtos = chats.Select(c => new ChatDto
+            {
+                Id = c.Id,
+                Name = c.Name,
+                IsGroup = c.IsGroup,
+                Type = c.Type.ToString(),
+                UserIds = c.Users.Select(u => u.UserId).ToList()
+            }).ToList();
+
+            return Ok(chatDtos);
         }
         [HttpPost("create-room")]
         public async Task<IActionResult> CreateRoom(string name)

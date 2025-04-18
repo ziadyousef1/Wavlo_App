@@ -4,8 +4,7 @@ namespace Wavlo.DTOs
 {
     public class ResetPasswordDto
     {
-        [Required]
-        public string Token { get; set; }
+
         [Required]
         public string Email { get; set; }
         [Required]
@@ -14,7 +13,8 @@ namespace Wavlo.DTOs
         [Compare("Password", ErrorMessage = "Password does not match")]
         public string confirmPassword { get; set; }
 
-        
+
+
 
     }
 }

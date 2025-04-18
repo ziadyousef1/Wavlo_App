@@ -50,42 +50,25 @@ namespace Wavlo.Repository
 
             if (existingChat != null)
             {
-                return existingChat.Id; 
+                return existingChat.Id;
             }
 
-            
             var chat = new Chat
             {
                 Type = ChatType.Private,
                 Name = name,
-                Users = new List<ChatUser>()
+                Users = new List<ChatUser>
+        {
+            new ChatUser { UserId = rootId },
+            new ChatUser { UserId = targetId }
+        }
             };
 
-            
-            var existingUsers = await _context.ChatUsers
-                .AsNoTracking()
-                .Where(cu => cu.UserId == rootId || cu.UserId == targetId)
-                .ToListAsync();
-
-            
-            if (!existingUsers.Any(u => u.UserId == rootId))
-            {
-                chat.Users.Add(new ChatUser { UserId = rootId });
-            }
-
-            
-            if (!existingUsers.Any(u => u.UserId == targetId))
-            {
-                chat.Users.Add(new ChatUser { UserId = targetId });
-            }
-
-            
             _context.Chats.Add(chat);
-
             await _context.SaveChangesAsync();
 
             return chat.Id;
-            
+
         }
 
         public async Task<int> CreateRoomAsync(string name, string userId , bool isGroup = false)

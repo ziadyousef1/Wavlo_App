@@ -387,3 +387,13 @@ D:\Test\Wavlo_Test\Wavlo\obj\Debug\net9.0\Wavlo.pdb
 D:\Test\Wavlo_Test\Wavlo\obj\Debug\net9.0\Wavlo.genruntimeconfig.cache
 D:\Test\Wavlo_Test\Wavlo\obj\Debug\net9.0\ref\Wavlo.dll
 D:\College\LEVEL 3 (2)\SW2\Project\Wavlo\Wavlo\obj\Debug\net9.0\compressed\9mityhv4kf-alj5i8911r.gz
+D:\College\LEVEL 3 (2)\SW2\Project\Wavlo\Wavlo\bin\Debug\net9.0\Azure.Storage.Blobs.dll
+D:\College\LEVEL 3 (2)\SW2\Project\Wavlo\Wavlo\bin\Debug\net9.0\Azure.Storage.Common.dll
+D:\College\LEVEL 3 (2)\SW2\Project\Wavlo\Wavlo\bin\Debug\net9.0\Microsoft.Azure.KeyVault.Core.dll
+D:\College\LEVEL 3 (2)\SW2\Project\Wavlo\Wavlo\bin\Debug\net9.0\Microsoft.Azure.Storage.Blob.dll
+D:\College\LEVEL 3 (2)\SW2\Project\Wavlo\Wavlo\bin\Debug\net9.0\Microsoft.Azure.Storage.Common.dll
+D:\College\LEVEL 3 (2)\SW2\Project\Wavlo\Wavlo\bin\Debug\net9.0\System.IO.Hashing.dll
+D:\College\LEVEL 3 (2)\SW2\Project\Wavlo\Wavlo\bin\Debug\net9.0\Asp.Versioning.Abstractions.dll
+D:\College\LEVEL 3 (2)\SW2\Project\Wavlo\Wavlo\bin\Debug\net9.0\Asp.Versioning.Http.dll
+D:\College\LEVEL 3 (2)\SW2\Project\Wavlo\Wavlo\bin\Debug\net9.0\Asp.Versioning.Mvc.dll
+D:\College\LEVEL 3 (2)\SW2\Project\Wavlo\Wavlo\bin\Debug\net9.0\Asp.Versioning.Mvc.ApiExplorer.dll
