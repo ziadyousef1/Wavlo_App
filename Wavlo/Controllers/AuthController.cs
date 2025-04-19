@@ -160,7 +160,6 @@ namespace Wavlo.Controllers
             if (user == null)
                 return NotFound("User not found.");
 
-
             var refreshToken = Request.Cookies["refreshToken"];
             if (string.IsNullOrEmpty(refreshToken))
                 return Unauthorized("Refresh token is missing.");
@@ -169,23 +168,18 @@ namespace Wavlo.Controllers
             if (storedToken == null || storedToken.IsRevoked || storedToken.IsExpired)
                 return Unauthorized("Invalid or expired refresh token.");
 
-
+            
             await _tokenService.RevokeRefreshToken(storedToken.Token);
 
-
+            
             Response.Cookies.Delete("refreshToken");
 
-
+            
             var chatUsers = _context.ChatUsers.Where(c => c.UserId == user.Id);
             _context.ChatUsers.RemoveRange(chatUsers);
             await _context.SaveChangesAsync();
 
-
-            var result = await _user.DeleteAsync(user);
-            if (!result.Succeeded)
-                return StatusCode(500, "Failed to delete the account.");
-
-            return Ok("Account deleted and logged out successfully.");
+            return Ok("User logged out successfully.");
         }
         [HttpPost("refresh")]
         public async Task<IActionResult> RefreshToken()
