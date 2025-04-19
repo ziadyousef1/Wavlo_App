@@ -406,6 +406,32 @@
   },
   {
     "ContainingType": "Wavlo.Controllers.ChatController",
+    "Method": "LeaveRoom",
+    "RelativePath": "api/Chat/leave-room",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "chatId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "api-version",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "X-version",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Wavlo.Controllers.ChatController",
     "Method": "PrivateChat",
     "RelativePath": "api/Chat/private",
     "HttpMethod": "GET",
