@@ -124,7 +124,18 @@ namespace Wavlo.Controllers
 
             return Ok("Joined successfully");
         }
+        [HttpPost("leave-room")]
+        public async Task<IActionResult> LeaveRoom(int chatId)
+        {
+            var userId = GetUserId();
+            if (string.IsNullOrEmpty(userId))
+                return Unauthorized("User ID not found");
+            var left = await _repository.LeaveRoomAsync(chatId, userId);
+            if (!left)
+                return BadRequest("You are not a member of this Group!");
 
+            return Ok("Left successfully");
+        }
 
 
         [HttpPost("send-message")]

@@ -178,5 +178,18 @@ namespace Wavlo.Repository
 
             return true;
         }
+        public async Task<bool> LeaveRoomAsync(int chatId,string userId)
+        {
+            var chatUser = await _context.ChatUsers
+                .FirstOrDefaultAsync(cu => cu.ChatId == chatId && cu.UserId == userId);
+
+            if(chatUser == null)
+                return false;
+
+            _context.ChatUsers.Remove(chatUser);
+            await _context.SaveChangesAsync();
+
+            return true;
+        }
     }
 }

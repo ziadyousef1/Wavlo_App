@@ -6,6 +6,7 @@ namespace Wavlo.Repository
     {
         Task<Chat> GetChatAsync(int id);
         Task<bool> JoinRoomAsync(int chatId, string userId);
+        Task<bool> LeaveRoomAsync(int chatId, string userId);
         Task<int> CreateRoomAsync(string name, string userId, bool isGroup = false);
         Task<IEnumerable<Chat>> GetChatsAsync(string userId);
         Task<int> CreatePrivateRoomAsync(string rootId, string targetId , string name);
