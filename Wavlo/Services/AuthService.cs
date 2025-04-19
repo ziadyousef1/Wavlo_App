@@ -181,17 +181,18 @@ namespace Wavlo.Services
 
             return resultDto;
         }
-        public async Task<bool> LogoutAsync(string userId)
+        public async Task<bool> LogoutAsync(string userId , string refreshToken)
         {
             var user = await _user.FindByIdAsync(userId);
             if (user == null)
             {
-                return false;
+                return false; 
             }
 
+            
+            await _tokenService.RevokeRefreshToken(refreshToken);
 
-            var result = await _user.DeleteAsync(user);
-            return result.Succeeded;
+            return true;
         }
     }
 }

@@ -8,6 +8,6 @@ namespace Wavlo.Services
         Task<AuthResultDto> RegisterAsync(RegisterDto registerDto);
         Task<ResetPasswordResultDto> ResetPasswordAsync(ResetPasswordDto resetPasswordDto);
 
-        Task<bool> LogoutAsync(string userId);
+        Task<bool> LogoutAsync(string userId, string refreshToken);
     }
 }
