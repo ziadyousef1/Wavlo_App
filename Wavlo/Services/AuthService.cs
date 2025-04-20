@@ -194,5 +194,24 @@ namespace Wavlo.Services
 
             return true;
         }
+        public async Task<bool> DeleteAccountAsync(string userId, string refreshToken)
+        {
+            
+            var user = await _user.FindByIdAsync(userId);
+            if (user == null)
+                return false;
+
+            
+            var storedToken = await _tokenService.GetRefreshToken(refreshToken);
+            if (storedToken != null && !storedToken.IsRevoked)
+            {
+                await _tokenService.RevokeRefreshToken(storedToken.Token);
+            }
+
+           
+            var result = await _user.DeleteAsync(user);
+            return result.Succeeded;
+        }
+
     }
 }

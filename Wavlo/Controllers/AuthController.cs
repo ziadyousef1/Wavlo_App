@@ -181,6 +181,28 @@ namespace Wavlo.Controllers
 
             return Ok("User logged out successfully.");
         }
+        [HttpDelete("delete-account")]
+        public async Task<IActionResult> DeleteAccount()
+        {
+            var userIdClaim = User.FindFirst(ClaimTypes.NameIdentifier);
+            if (userIdClaim == null)
+                return Unauthorized("User not authenticated.");
+
+            var userId = userIdClaim.Value;
+            var refreshToken = Request.Cookies["refreshToken"];
+
+            if (string.IsNullOrEmpty(refreshToken))
+                return Unauthorized("Refresh token is missing.");
+
+            var success = await _authService.DeleteAccountAsync(userId, refreshToken); 
+
+            if (!success)
+                return StatusCode(500, "Failed to delete account.");
+
+            Response.Cookies.Delete("refreshToken");
+            return Ok("Account deleted successfully.");
+        }
+
         [HttpPost("refresh")]
         public async Task<IActionResult> RefreshToken()
         {
