@@ -132,6 +132,30 @@ namespace Wavlo.Controllers
 
 
         }
+        [HttpPost("resend-otp")]
+        public async Task<IActionResult> ResendOtp([FromBody] ResendOtpRequest request)
+        {
+            var user = await _user.FindByEmailAsync(request.Email);
+            if (user == null)
+                return NotFound("User Not Found !");
+
+            var newCode = new Random().Next(100000, 999999).ToString();
+            user.VerificationCode = newCode;
+            user.ExpirationCode = DateTime.UtcNow.AddMinutes(10);
+
+            await _user.UpdateAsync(user);
+
+            var message = new EmailMessage(
+                new List<string> { user.Email },
+                "Your OTP Code",
+                $"Your verification code is: {newCode}"
+            );
+
+            await _emailSender.SendEmailAsync(message);
+
+            return Ok("OTP Resent Successfully :)");
+        }
+
         [HttpPost("reset-Password")]
         public async Task<IActionResult> ResetPassword([FromBody] ResetPasswordDto resetPassword)
         {
