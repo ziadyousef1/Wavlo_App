@@ -145,11 +145,14 @@ namespace Wavlo.Controllers
 
             await _user.UpdateAsync(user);
 
+            var htmlBody = HtmlTemplate.GetVerificationCodeEmailTemplate(newCode);
+
             var message = new EmailMessage(
-                new List<string> { user.Email },
-                "Your OTP Code",
-                $"Your verification code is: {newCode}"
+              new List<string> { user.Email },
+               "Your OTP Code",
+                  htmlBody
             );
+
 
             await _emailSender.SendEmailAsync(message);
 
