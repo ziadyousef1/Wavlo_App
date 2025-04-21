@@ -175,7 +175,7 @@ namespace Wavlo.Controllers
 
         }
         [HttpPost("logout")]
-        public async Task<IActionResult> LogoutAndDeleteAccount()
+        public async Task<IActionResult> Logout()
         {
             var userIdClaim = User.FindFirst(ClaimTypes.NameIdentifier);
             if (userIdClaim == null)
@@ -195,18 +195,11 @@ namespace Wavlo.Controllers
             if (storedToken == null || storedToken.IsRevoked || storedToken.IsExpired)
                 return Unauthorized("Invalid or expired refresh token.");
 
-            
             await _tokenService.RevokeRefreshToken(storedToken.Token);
 
-            
             Response.Cookies.Delete("refreshToken");
 
-            
-            var chatUsers = _context.ChatUsers.Where(c => c.UserId == user.Id);
-            _context.ChatUsers.RemoveRange(chatUsers);
-            await _context.SaveChangesAsync();
-
-            return Ok("User logged out successfully.");
+            return Ok("User Logged out Successfully :(");
         }
         [HttpDelete("delete-account")]
         public async Task<IActionResult> DeleteAccount()
