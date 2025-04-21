@@ -167,6 +167,32 @@
   },
   {
     "ContainingType": "Wavlo.Controllers.AuthController",
+    "Method": "ResendOtp",
+    "RelativePath": "api/Auth/resend-otp",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "Wavlo.OTPValidation.ResendOtpRequest",
+        "IsRequired": true
+      },
+      {
+        "Name": "api-version",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "X-version",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Wavlo.Controllers.AuthController",
     "Method": "ResetPassword",
     "RelativePath": "api/Auth/reset-Password",
     "HttpMethod": "POST",
