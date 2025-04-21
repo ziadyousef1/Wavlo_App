@@ -149,7 +149,7 @@ namespace Wavlo.Controllers
 
             var message = new EmailMessage(
               new List<string> { user.Email },
-               "Your OTP Code",
+               "Your New Verification Code",
                   htmlBody
             );
 
