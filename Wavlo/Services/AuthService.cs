@@ -1,7 +1,9 @@
 ﻿using Microsoft.AspNetCore.Identity;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Options;
 using Newtonsoft.Json.Linq;
 using System.Web;
+using Wavlo.Data;
 using Wavlo.DTOs;
 using Wavlo.MailService;
 using Wavlo.Models;
@@ -17,14 +19,16 @@ namespace Wavlo.Services
         private readonly IEmailSender _emailSender;
         public readonly JwtSettings _jwtSettings;
         private readonly IFileService _fileService;
+        private readonly ChatDbContext _context;
 
         public AuthService(ITokenService tokenService, UserManager<User> user, IEmailSender emailSender
-        , IOptions<JwtSettings> jwtSettings, IFileService fileService)
+        , IOptions<JwtSettings> jwtSettings, IFileService fileService, ChatDbContext context)
         {
             _tokenService = tokenService;
             _user = user;
             _emailSender = emailSender;
             _fileService = fileService;
+            _context = context;
         }
         public async Task<AuthResultDto> LoginAsync(LoginDto loginDto)
         {
@@ -196,21 +200,44 @@ namespace Wavlo.Services
         }
         public async Task<bool> DeleteAccountAsync(string userId, string refreshToken)
         {
-            
+
             var user = await _user.FindByIdAsync(userId);
             if (user == null)
                 return false;
 
-            
-            var storedToken = await _tokenService.GetRefreshToken(refreshToken);
-            if (storedToken != null && !storedToken.IsRevoked)
-            {
-                await _tokenService.RevokeRefreshToken(storedToken.Token);
-            }
+            var token = await _context.RefreshTokens
+                .FirstOrDefaultAsync(t => t.Token == refreshToken && t.UserId == user.Id);
 
-           
+            if (token == null)
+                return false;
+
+            
+            _context.RefreshTokens.RemoveRange(
+                _context.RefreshTokens.Where(t => t.UserId == user.Id)
+            );
+
+            
+            _context.ChatUsers.RemoveRange(
+                _context.ChatUsers.Where(c => c.UserId == user.Id)
+            );
+
+            
+            _context.Messages.RemoveRange(
+                _context.Messages.Where(m => m.UserId == user.Id)
+            );
+
+            
+            _context.UserImages.RemoveRange(
+                _context.UserImages.Where(i => i.UserId == user.Id)
+            );
+
+            
             var result = await _user.DeleteAsync(user);
-            return result.Succeeded;
+            if (!result.Succeeded)
+                return false;
+
+            await _context.SaveChangesAsync();
+            return true;
         }
 
     }
