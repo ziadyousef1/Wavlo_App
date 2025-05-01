@@ -8,6 +8,8 @@ namespace Wavlo.Services
 
         public Task<List<StoryResponseDto>> GetActiveStoriesAsync();
 
+        public Task<StoryViewersDto> GetStoryViewersAsync(Guid storyId);
+
         public Task CleanupExpiredStoriesAsync();
 
         public Task<bool> DeleteStoryAsync(Guid storyId);

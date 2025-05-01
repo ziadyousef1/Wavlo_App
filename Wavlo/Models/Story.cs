@@ -8,6 +8,8 @@
 
         public string MediaUrl { get; set; } 
         public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
-        public DateTime ExpiresAt { get; set; } 
+        public DateTime ExpiresAt { get; set; }
+
+        public ICollection<StoryView> Views { get; set; } = new List<StoryView>();
     }
 }

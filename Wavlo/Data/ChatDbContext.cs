@@ -10,6 +10,7 @@ namespace Wavlo.Data
         public DbSet<User> Users { get; set; }
         public DbSet<Chat> Chats { get; set; }
         public DbSet<Story> Stories { get; set; }
+        public DbSet<StoryView> StoryViews { get; set; }
         public DbSet<ChatUser> ChatUsers { get; set; }
         public DbSet<Message> Messages { get; set; }
         public DbSet<UserImage> UserImages { get; set; }
@@ -45,6 +46,12 @@ namespace Wavlo.Data
                 .WithMany(c => c.Messages)
                 .HasForeignKey(m => m.ChatId)
                 .OnDelete(DeleteBehavior.Cascade);
+
+            modelBuilder.Entity<StoryView>()
+     .HasOne(sv => sv.Story)
+     .WithMany()
+     .HasForeignKey(sv => sv.StoryId)
+     .OnDelete(DeleteBehavior.NoAction);
 
 
         }
