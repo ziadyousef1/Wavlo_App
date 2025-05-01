@@ -10,6 +10,7 @@ namespace Wavlo.Controllers
     public class StoryController : ControllerBase
     {
         private readonly StoryService _service;
+
         public StoryController(StoryService service)
         {
             _service = service;
@@ -19,10 +20,10 @@ namespace Wavlo.Controllers
         public async Task<IActionResult> UploadStory([FromForm] CreateStoryDto dto)
         {
             var result = await _service.UploadStoryAsync(dto);
-            if (!result)
+            if (result == null)
                 return Unauthorized("You must be logged in.");
 
-            return Ok("Story uploaded successfully.");
+            return Ok(result);
         }
 
         [HttpGet("stories")]

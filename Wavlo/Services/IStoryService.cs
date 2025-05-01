@@ -4,7 +4,7 @@ namespace Wavlo.Services
 {
     public interface IStoryService
     {
-        public Task<bool> UploadStoryAsync(CreateStoryDto dto);
+        public Task<StoryUploadDto?> UploadStoryAsync(CreateStoryDto dto);
 
         public Task<List<StoryResponseDto>> GetActiveStoriesAsync();
 
