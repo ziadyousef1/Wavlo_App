@@ -81,6 +81,13 @@ namespace Wavlo.Services
                 .Where(s => s.Id == storyId)
                 .FirstOrDefaultAsync();
         }
+
+        public async Task AddStoryViewAsync(StoryView storyView)
+        {
+            _context.StoryViews.Add(storyView);
+            await _context.SaveChangesAsync();
+        }
+
         public async Task<StoryViewersDto> GetStoryViewersAsync(Guid storyId)
         {
             var viewers = await _context.StoryViews
