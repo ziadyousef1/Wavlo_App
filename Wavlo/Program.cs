@@ -129,7 +129,7 @@ namespace Wavlo
                         .AllowAnyMethod();
                 });
             });
-            builder.Services.AddHostedService<StoryCleanupBackgroundService>();
+           // builder.Services.AddHostedService<StoryCleanupBackgroundService>();
 
             var app = builder.Build();
 
