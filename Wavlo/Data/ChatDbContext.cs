@@ -48,10 +48,10 @@ namespace Wavlo.Data
                 .OnDelete(DeleteBehavior.Cascade);
 
             modelBuilder.Entity<StoryView>()
-     .HasOne(sv => sv.Story)
-     .WithMany()
-     .HasForeignKey(sv => sv.StoryId)
-     .OnDelete(DeleteBehavior.NoAction);
+                .HasOne(sv => sv.Story)
+                .WithMany()
+                .HasForeignKey(sv => sv.StoryId)
+                .OnDelete(DeleteBehavior.Cascade);
 
 
         }
