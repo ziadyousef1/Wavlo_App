@@ -68,6 +68,7 @@ namespace Wavlo
             builder.Services.AddScoped<IFileService, FileService>();
             builder.Services.AddScoped<IChatRepository, ChatRepository>();
             builder.Services.AddScoped<ICloudStorageService, CloudStorageService>();
+            builder.Services.AddScoped<IStoryService, StoryService>();
             builder.Services.Configure<CloudStorageSettings>(builder.Configuration.GetSection(CloudStorageSettings.AzureStorage));
 
             builder.Services.AddSingleton(sp =>
