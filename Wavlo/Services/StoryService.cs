@@ -75,6 +75,12 @@ namespace Wavlo.Services
 
             return response;
         }
+        public async Task<Story> GetStoryByIdAsync(Guid storyId)
+        {
+            return await _context.Stories
+                .Where(s => s.Id == storyId)
+                .FirstOrDefaultAsync();
+        }
         public async Task<StoryViewersDto> GetStoryViewersAsync(Guid storyId)
         {
             var viewers = await _context.StoryViews

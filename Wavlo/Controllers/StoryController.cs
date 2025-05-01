@@ -34,6 +34,19 @@ namespace Wavlo.Controllers
             var stories = await _service.GetActiveStoriesAsync();
             return Ok(stories);
         }
+        [HttpGet("{storyId}")]
+        public async Task<IActionResult> GetStory(Guid storyId)
+        {
+            var story = await _service.GetStoryByIdAsync(storyId);
+
+            if (story == null)
+            {
+                return NotFound();
+            }
+
+            return Ok(story);
+        }
+
         [HttpGet("{storyId}/viewers")]
         public async Task<IActionResult> GetViewers(Guid storyId)
         {
