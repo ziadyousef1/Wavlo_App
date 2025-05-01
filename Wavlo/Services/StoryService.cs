@@ -54,10 +54,11 @@ namespace Wavlo.Services
             var now = DateTime.UtcNow;
 
             var stories = await _context.Stories
-                .Include(s => s.User)
-                .Where(s => s.ExpiresAt > now)
-                .OrderByDescending(s => s.CreatedAt)
-                .ToListAsync();
+     .Include(s => s.User)
+         .ThenInclude(u => u.UserImages)
+     .Where(s => s.ExpiresAt > now)
+     .OrderByDescending(s => s.CreatedAt)
+     .ToListAsync();
 
             var response = stories.Select(s => new StoryResponseDto
             {
