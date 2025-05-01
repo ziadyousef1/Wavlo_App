@@ -1,4 +1,5 @@
 ﻿using Wavlo.DTOs;
+using Wavlo.Models;
 
 namespace Wavlo.Services
 {
@@ -9,6 +10,7 @@ namespace Wavlo.Services
         public Task<List<StoryResponseDto>> GetActiveStoriesAsync();
 
         public Task<StoryViewersDto> GetStoryViewersAsync(Guid storyId);
+        public Task<Story> GetStoryByIdAsync(Guid storyId);
 
         public Task CleanupExpiredStoriesAsync();
 
