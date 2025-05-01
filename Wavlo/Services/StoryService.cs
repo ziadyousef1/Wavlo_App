@@ -11,19 +11,19 @@ namespace Wavlo.Services
         private readonly IWebHostEnvironment _env;
         private readonly ChatDbContext _context;
         private readonly IHttpContextAccessor _httpContextAccessor;
-        public StoryService(IWebHostEnvironment env , ChatDbContext context , IHttpContextAccessor httpContextAccessor)
+
+        public StoryService(IWebHostEnvironment env, ChatDbContext context, IHttpContextAccessor httpContextAccessor)
         {
             _context = context;
             _env = env;
             _httpContextAccessor = httpContextAccessor;
         }
 
-        public async Task<bool> UploadStoryAsync(CreateStoryDto dto)
+        public async Task<StoryUploadDto?> UploadStoryAsync(CreateStoryDto dto)
         {
             var userId = _httpContextAccessor.HttpContext?.User.FindFirstValue(ClaimTypes.NameIdentifier);
-            if (userId == null) return false;
+            if (userId == null) return null;
 
-            
             var uploadsFolder = Path.Combine(_env.WebRootPath, "stories");
             Directory.CreateDirectory(uploadsFolder);
 
@@ -45,20 +45,24 @@ namespace Wavlo.Services
 
             _context.Stories.Add(story);
             await _context.SaveChangesAsync();
-            return true;
+
+            return new StoryUploadDto
+            {
+                UserId = userId,
+                MediaUrl = story.MediaUrl
+            };
         }
-        
 
         public async Task<List<StoryResponseDto>> GetActiveStoriesAsync()
         {
             var now = DateTime.UtcNow;
 
             var stories = await _context.Stories
-     .Include(s => s.User)
-         .ThenInclude(u => u.UserImages)
-     .Where(s => s.ExpiresAt > now)
-     .OrderByDescending(s => s.CreatedAt)
-     .ToListAsync();
+                .Include(s => s.User)
+                    .ThenInclude(u => u.UserImages)
+                .Where(s => s.ExpiresAt > now)
+                .OrderByDescending(s => s.CreatedAt)
+                .ToListAsync();
 
             var response = stories.Select(s => new StoryResponseDto
             {
@@ -85,6 +89,5 @@ namespace Wavlo.Services
                 await _context.SaveChangesAsync();
             }
         }
-
     }
 }
