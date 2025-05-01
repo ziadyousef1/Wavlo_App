@@ -89,5 +89,23 @@ namespace Wavlo.Services
                 await _context.SaveChangesAsync();
             }
         }
+        public async Task<bool> DeleteStoryAsync(Guid storyId)
+        {
+            var userId = _httpContextAccessor.HttpContext?.User.FindFirstValue(ClaimTypes.NameIdentifier);
+            if (userId == null) return false;
+
+            var story = await _context.Stories.FirstOrDefaultAsync(s => s.Id == storyId && s.UserId == userId);
+            if (story == null) return false;
+
+            
+            var fullPath = Path.Combine(_env.WebRootPath, story.MediaUrl.TrimStart('/'));
+            if (File.Exists(fullPath))
+                File.Delete(fullPath);
+
+            _context.Stories.Remove(story);
+            await _context.SaveChangesAsync();
+
+            return true;
+        }
     }
 }
