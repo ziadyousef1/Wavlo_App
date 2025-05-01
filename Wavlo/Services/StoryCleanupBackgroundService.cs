@@ -16,7 +16,7 @@
             {
                 using (var scope = _serviceProvider.CreateScope())
                 {
-                    var storyService = scope.ServiceProvider.GetRequiredService<StoryService>();
+                    var storyService = scope.ServiceProvider.GetRequiredService<IStoryService>();
                     await storyService.CleanupExpiredStoriesAsync();
                 }
                 await Task.Delay(_interval, stoppingToken);
