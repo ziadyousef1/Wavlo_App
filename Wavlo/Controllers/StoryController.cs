@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Wavlo.DTOs;
+using Wavlo.Models;
 using Wavlo.Services;
 
 namespace Wavlo.Controllers
@@ -34,6 +35,7 @@ namespace Wavlo.Controllers
             var stories = await _service.GetActiveStoriesAsync();
             return Ok(stories);
         }
+
         [HttpGet("{storyId}")]
         public async Task<IActionResult> GetStory(Guid storyId)
         {
@@ -46,6 +48,30 @@ namespace Wavlo.Controllers
 
             return Ok(story);
         }
+
+        [HttpPost("{storyId}/view")]
+        public async Task<IActionResult> ViewStory(Guid storyId)
+        {
+            var story = await _service.GetStoryByIdAsync(storyId);
+            if (story == null)
+            {
+                return NotFound();
+            }
+
+            var userId = User.Identity.Name; 
+            var storyView = new StoryView
+            {
+                StoryId = storyId,
+                UserId = userId,
+                ViewedAt = DateTime.UtcNow
+            };
+
+           
+            await _service.AddStoryViewAsync(storyView);
+
+            return Ok();
+        }
+
 
         [HttpGet("{storyId}/viewers")]
         public async Task<IActionResult> GetViewers(Guid storyId)
