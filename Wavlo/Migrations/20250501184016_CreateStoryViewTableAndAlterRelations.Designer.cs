@@ -12,8 +12,8 @@ using Wavlo.Data;
 namespace Wavlo.Migrations
 {
     [DbContext(typeof(ChatDbContext))]
-    [Migration("20250501181604_AddStoryViewTable")]
-    partial class AddStoryViewTable
+    [Migration("20250501184016_CreateStoryViewTableAndAlterRelations")]
+    partial class CreateStoryViewTableAndAlterRelations
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -550,7 +550,7 @@ namespace Wavlo.Migrations
                     b.HasOne("Wavlo.Models.Story", "Story")
                         .WithMany()
                         .HasForeignKey("StoryId")
-                        .OnDelete(DeleteBehavior.NoAction)
+                        .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.HasOne("Wavlo.Models.Story", null)

@@ -5,7 +5,7 @@
 namespace Wavlo.Migrations
 {
     /// <inheritdoc />
-    public partial class AddStoryViewTable : Migration
+    public partial class CreateStoryViewTableAndAlterRelationsUpdate : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
