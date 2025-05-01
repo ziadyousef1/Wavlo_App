@@ -10,5 +10,7 @@ namespace Wavlo.Services
 
         public Task CleanupExpiredStoriesAsync();
 
+        public Task<bool> DeleteStoryAsync(Guid storyId);
+
     }
 }
