@@ -41,6 +41,7 @@ namespace Wavlo.Controllers
             await _service.CleanupExpiredStoriesAsync();
             return Ok(new { message = "Expired stories cleaned up successfully." });
         }
+
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteStory(Guid id)
         {
