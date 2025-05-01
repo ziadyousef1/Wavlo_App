@@ -9,6 +9,7 @@ namespace Wavlo.Data
     {
         public DbSet<User> Users { get; set; }
         public DbSet<Chat> Chats { get; set; }
+        public DbSet<Story> Stories { get; set; }
         public DbSet<ChatUser> ChatUsers { get; set; }
         public DbSet<Message> Messages { get; set; }
         public DbSet<UserImage> UserImages { get; set; }

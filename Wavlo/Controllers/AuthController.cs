@@ -201,6 +201,7 @@ namespace Wavlo.Controllers
 
             return Ok("User Logged out Successfully :(");
         }
+
         [HttpDelete("delete-account")]
         public async Task<IActionResult> DeleteAccount()
         {
