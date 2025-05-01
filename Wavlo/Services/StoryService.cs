@@ -75,6 +75,25 @@ namespace Wavlo.Services
 
             return response;
         }
+        public async Task<StoryViewersDto> GetStoryViewersAsync(Guid storyId)
+        {
+            var viewers = await _context.StoryViews
+        .Where(v => v.StoryId == storyId)
+        .Include(v => v.User)
+        .Select(v => new ViewerDto
+        {
+            Id = v.User.Id,
+            Username = v.User.UserName,
+            ViewedAt = v.ViewedAt 
+        })
+        .ToListAsync();
+
+            return new StoryViewersDto
+            {
+                Count = viewers.Count,
+                Viewers = viewers
+            };
+        }
 
         public async Task CleanupExpiredStoriesAsync()
         {

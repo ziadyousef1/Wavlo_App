@@ -34,6 +34,13 @@ namespace Wavlo.Controllers
             var stories = await _service.GetActiveStoriesAsync();
             return Ok(stories);
         }
+        [HttpGet("{storyId}/viewers")]
+        public async Task<IActionResult> GetViewers(Guid storyId)
+        {
+            var result = await _service.GetStoryViewersAsync(storyId);
+            return Ok(result);
+        }
+
 
         [HttpDelete("cleanup")]
         public async Task<IActionResult> CleanupExpiredStories()
