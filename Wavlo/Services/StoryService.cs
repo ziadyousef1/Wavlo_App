@@ -24,7 +24,7 @@ namespace Wavlo.Services
             var userId = _httpContextAccessor.HttpContext?.User.FindFirstValue(ClaimTypes.NameIdentifier);
             if (userId == null) return null;
 
-            var uploadsFolder = Path.Combine(_env.WebRootPath, "stories");
+            var uploadsFolder = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "stories");
             Directory.CreateDirectory(uploadsFolder);
 
             var fileName = Guid.NewGuid().ToString() + Path.GetExtension(dto.MediaFile.FileName);

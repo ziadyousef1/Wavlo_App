@@ -11,9 +11,9 @@ namespace Wavlo.Controllers
     [ApiController]
     public class StoryController : ControllerBase
     {
-        private readonly StoryService _service;
+        private readonly IStoryService _service;
 
-        public StoryController(StoryService service)
+        public StoryController(IStoryService service)
         {
             _service = service;
         }
