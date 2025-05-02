@@ -60,8 +60,9 @@ namespace Wavlo.Controllers
                     return NotFound();
 
                 var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
-                if (userId == null)
-                    return Unauthorized();
+                if (string.IsNullOrEmpty(userId))
+                    return Unauthorized("User not authenticated");
+
 
                 var storyView = new StoryView
                 {
@@ -70,8 +71,15 @@ namespace Wavlo.Controllers
                     ViewedAt = DateTime.UtcNow
                 };
 
-                await _service.AddStoryViewAsync(storyView);
-                return Ok();
+                try
+                {
+                    await _service.AddStoryViewAsync(storyView);
+                }
+                catch (Exception ex)
+                {
+                    return StatusCode(500, $"Internal Server Error: {ex.Message} - {ex.InnerException?.Message}");
+                }
+
             }
             catch (Exception ex)
             {
