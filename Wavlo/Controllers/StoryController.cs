@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNet.SignalR;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using System.Security.Claims;
 using Wavlo.DTOs;
 using Wavlo.Models;
 using Wavlo.Services;
@@ -52,24 +53,30 @@ namespace Wavlo.Controllers
         [HttpPost("{storyId}/view")]
         public async Task<IActionResult> ViewStory(Guid storyId)
         {
-            var story = await _service.GetStoryByIdAsync(storyId);
-            if (story == null)
+            try
             {
-                return NotFound();
+                var story = await _service.GetStoryByIdAsync(storyId);
+                if (story == null)
+                    return NotFound();
+
+                var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+                if (userId == null)
+                    return Unauthorized();
+
+                var storyView = new StoryView
+                {
+                    StoryId = storyId,
+                    UserId = userId,
+                    ViewedAt = DateTime.UtcNow
+                };
+
+                await _service.AddStoryViewAsync(storyView);
+                return Ok();
             }
-
-            var userId = User.Identity.Name; 
-            var storyView = new StoryView
+            catch (Exception ex)
             {
-                StoryId = storyId,
-                UserId = userId,
-                ViewedAt = DateTime.UtcNow
-            };
-
-           
-            await _service.AddStoryViewAsync(storyView);
-
-            return Ok();
+                return StatusCode(500, $"Internal server error: {ex.Message}");
+            }
         }
 
 
