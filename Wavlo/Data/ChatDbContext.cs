@@ -47,10 +47,17 @@ namespace Wavlo.Data
                 .HasForeignKey(m => m.ChatId)
                 .OnDelete(DeleteBehavior.Cascade);
 
+
             modelBuilder.Entity<StoryView>()
                 .HasOne(sv => sv.Story)
                 .WithMany()
                 .HasForeignKey(sv => sv.StoryId)
+                .OnDelete(DeleteBehavior.Restrict);
+
+            modelBuilder.Entity<StoryView>()
+                .HasOne(sv => sv.User)
+                .WithMany()
+                .HasForeignKey(sv => sv.UserId)
                 .OnDelete(DeleteBehavior.Cascade);
 
 
