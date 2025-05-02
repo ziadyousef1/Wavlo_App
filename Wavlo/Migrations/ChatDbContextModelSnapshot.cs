@@ -547,7 +547,7 @@ namespace Wavlo.Migrations
                     b.HasOne("Wavlo.Models.Story", "Story")
                         .WithMany()
                         .HasForeignKey("StoryId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
                     b.HasOne("Wavlo.Models.Story", null)

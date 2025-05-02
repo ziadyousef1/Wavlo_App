@@ -5,10 +5,8 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace Wavlo.Migrations
 {
-    /// <inheritdoc />
-    public partial class CreateStoryViewTableAndAlterRelations : Migration
+    public partial class CreateStoryViewTableAndFixRelation : Migration
     {
-        /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.CreateTable(
@@ -34,7 +32,7 @@ namespace Wavlo.Migrations
                         column: x => x.StoryId,
                         principalTable: "Stories",
                         principalColumn: "Id",
-                        onDelete: ReferentialAction.Restrict); 
+                        onDelete: ReferentialAction.Restrict);
                 });
 
             migrationBuilder.CreateIndex(
