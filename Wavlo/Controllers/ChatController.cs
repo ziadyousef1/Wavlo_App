@@ -156,7 +156,9 @@ namespace Wavlo.Controllers
             string attachmentType = "Text";
             if (!string.IsNullOrEmpty(dto.AttachmentUrl))
             {
-                var extension = Path.GetExtension(dto.AttachmentUrl).ToLower();
+                var fileName = Path.GetFileName(dto.AttachmentUrl); 
+                var extension = Path.GetExtension(fileName)?.ToLower(); 
+
                 if (new[] { ".jpg", ".jpeg", ".png", ".gif", ".bmp" }.Contains(extension))
                     attachmentType = "Image";
                 else if (new[] { ".mp4", ".avi", ".mov", ".mkv" }.Contains(extension))
