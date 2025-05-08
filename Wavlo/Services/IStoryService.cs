@@ -9,8 +9,8 @@ namespace Wavlo.Services
 
         public Task<List<StoryResponseDto>> GetActiveStoriesAsync();
 
-        public Task AddStoryViewAsync(StoryView storyView);
-        public Task<StoryViewersDto> GetStoryViewersAsync(Guid storyId);
+      //  public Task AddStoryViewAsync(StoryView storyView);
+      //  public Task<StoryViewersDto> GetStoryViewersAsync(Guid storyId);
         public Task<Story> GetStoryByIdAsync(Guid storyId);
 
         public Task CleanupExpiredStoriesAsync();

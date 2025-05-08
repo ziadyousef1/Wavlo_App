@@ -65,6 +65,8 @@ namespace Wavlo.Controllers
 
             return Ok(new
             {
+                firstName = result.FirstName,
+                lastName = result.LastName,
                 token = result.Token,
                 refreshToken = result.RefreshToken
             });

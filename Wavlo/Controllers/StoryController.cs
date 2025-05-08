@@ -50,51 +50,51 @@ namespace Wavlo.Controllers
             return Ok(story);
         }
 
-        [HttpPost("{storyId}/view")]
-        public async Task<IActionResult> ViewStory(Guid storyId)
-        {
-            try
-            {
-                var story = await _service.GetStoryByIdAsync(storyId);
-                if (story == null)
-                    return NotFound();
+        //[HttpPost("{storyId}/view")]
+        //public async Task<IActionResult> ViewStory(Guid storyId)
+        //{
+        //    try
+        //    {
+        //        var story = await _service.GetStoryByIdAsync(storyId);
+        //        if (story == null)
+        //            return NotFound();
 
-                var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
-                if (string.IsNullOrEmpty(userId))
-                    return Unauthorized("User not authenticated");
-
-
-                var storyView = new StoryView
-                {
-                    StoryId = storyId,
-                    UserId = userId,
-                    ViewedAt = DateTime.UtcNow
-                };
-
-                try
-                {
-                    await _service.AddStoryViewAsync(storyView);
-                }
-                catch (Exception ex)
-                {
-                    return StatusCode(500, $"Internal Server Error: {ex.Message} - {ex.InnerException?.Message}");
-                }
-
-            }
-            catch (Exception ex)
-            {
-                return StatusCode(500, $"Internal server error: {ex.Message}");
-            }
-            return Ok();
-        }
+        //        var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+        //        if (string.IsNullOrEmpty(userId))
+        //            return Unauthorized("User not authenticated");
 
 
-        [HttpGet("{storyId}/viewers")]
-        public async Task<IActionResult> GetViewers(Guid storyId)
-        {
-            var result = await _service.GetStoryViewersAsync(storyId);
-            return Ok(result);
-        }
+        //        var storyView = new StoryView
+        //        {
+        //            StoryId = storyId,
+        //            UserId = userId,
+        //            ViewedAt = DateTime.UtcNow
+        //        };
+
+        //        try
+        //        {
+        //            await _service.AddStoryViewAsync(storyView);
+        //        }
+        //        catch (Exception ex)
+        //        {
+        //            return StatusCode(500, $"Internal Server Error: {ex.Message} - {ex.InnerException?.Message}");
+        //        }
+
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        return StatusCode(500, $"Internal server error: {ex.Message}");
+        //    }
+        //    return Ok();
+        //}
+
+
+        //[HttpGet("{storyId}/viewers")]
+        //public async Task<IActionResult> GetViewers(Guid storyId)
+        //{
+        //    var result = await _service.GetStoryViewersAsync(storyId);
+        //    return Ok(result);
+        //}
 
 
         [HttpDelete("cleanup")]

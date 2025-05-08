@@ -55,6 +55,8 @@ namespace Wavlo.Services
 
             authRes.Token = jwtToken;
             authRes.RefreshToken = refreshToken;
+            authRes.FirstName = user.FirstName;    
+            authRes.LastName = user.LastName;
             authRes.IsSucceeded = true;
             return authRes;
         }
